@@ -34,9 +34,9 @@ var DealerEntry = props =>
 				</div>
 			</div>
 			<div className="card-footer gray">
-				<div className="row container-fluid text-left">
+				<div className="cert-container">
 					{props.dealer.certifications.map((certificationObj, index) =>
-						<div className="col-xs-6" key={index}>
+						<div className="cert text-left" key={index}>
 							<span className={certificationObj.className} />
 							{certificationObj.certification}
 						</div>

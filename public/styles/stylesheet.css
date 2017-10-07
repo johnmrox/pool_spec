@@ -37,6 +37,7 @@ footer {
 .contact-label-row,
 .filter-inner-container,
 .card-top,
+.navbar-list-items,
 .outer-nav-bar,
 .nav-top-first,
 .nav-top-second,
@@ -138,6 +139,27 @@ footer {
 
 .navbar-list span {
 	display: none;
+}
+
+.navbar-list span {
+	display: none;
+}
+
+/* keep below navbar list span */
+.find-pool-pro span {
+	display: inline;
+	padding-left: 0;
+}
+
+.inner-nav-container li:last-child div {
+	color: #216dde;
+	border: 2px solid #7aabdd;
+	padding: 7px;
+	border-radius: 3px;
+}
+
+.navbar-list-items {
+	align-items: center;
 }
 
 .outer-top-bar {
@@ -326,6 +348,7 @@ footer {
 }
 
 .card-container {
+	font-size: 13px;
 	padding: 0;
 }
 
@@ -336,8 +359,13 @@ footer {
 .contact-dealer-btn {
 	text-align: center;
 	background-color: #fff;
+	font-size: 14px;
+	font-family: 'Monsal Gothic Bold';
+	font-weight: 600;
+	color: navy;
 	border-radius: 3px;
 	border: 2px solid #06c7c7;
+	padding: 8px 10px;
 }
 
 .contact-dealer-btn span,
@@ -349,10 +377,6 @@ footer {
 	color: gray;
 	font-style: italic;
 	padding: 5px 0;
-}
-
-.contact-dealer-btn {
-	padding: 10px;
 }
 
 .card-top {
@@ -369,7 +393,7 @@ footer {
 	margin-top: 30px;
 	align-items: center;
 	justify-content: center;
-	height: 70px;
+	height: 60px;
 }
 
 .dealer-name {

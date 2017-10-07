@@ -1,7 +1,7 @@
 var DealerEntry = props =>
 	<div className="col-md-4 text-center all-card-container">
-		<div className="col-md-12 mx-auto card  card-container">
-			<div className="container-fluid">
+		<div className="col-md-12 mx-auto card card-container">
+			<div className="container-fluid card-body">
 				<div className="card-top container-fluid">
 					<p className="dealer-name">
 						{props.dealer.name}

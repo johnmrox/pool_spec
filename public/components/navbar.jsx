@@ -28,9 +28,9 @@ var Nav = props =>
             <span className="glyphicon glyphicon-chevron-right teal" />
           </li>
           <li className="navbar-list">
-            <a href="#" className="button find-pool-pro">
-              Find A Pool Pro<span className="glyphicon glyphicon-map-marker" />
-            </a>
+            <div href="#" className="button find-pool-pro">
+              <span className="glyphicon glyphicon-map-marker" />Find A Pool Pro
+            </div>
           </li>
         </ul>
       </div>

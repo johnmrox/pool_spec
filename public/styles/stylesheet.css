@@ -117,7 +117,7 @@ footer {
 /* navbar */
 
 .inner-nav-container {
-	flex-wrap: wrap;
+/*	flex-wrap: wrap;*/
 	justify-content: space-between;
 	width: 90%;
 }
@@ -218,6 +218,7 @@ footer {
 /* contact card */
 
 .contact-card-container {
+	height: 100%;
 	max-width: 500px;
 	min-width: 300px;
 }
@@ -506,12 +507,12 @@ footer {
 }
 
 @media (max-width: 1224px) {
-	.inner-nav-container {
+/*	.inner-nav-container {
 		flex-direction: column;
 		justify-content: center
-	}
+	}*/
 
-@media (max-width: 1024px) {
+@media (max-width: 844px) {
 	.top-bar-container,
 	.top-bar-item-container {
 		display: flex;

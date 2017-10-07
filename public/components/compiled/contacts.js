@@ -1,0 +1,12 @@
+"use strict";
+
+var Contact = function Contact(props) {
+	return React.createElement(
+		"div",
+		null,
+		props.dealerName
+	);
+};
+
+window.Contact = Contact;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL2NvbnRhY3RzLmpzeCJdLCJuYW1lcyI6WyJDb250YWN0IiwicHJvcHMiLCJkZWFsZXJOYW1lIiwid2luZG93Il0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUlBLFVBQVUsU0FBVkEsT0FBVSxDQUFDQyxLQUFEO0FBQUEsUUFDYjtBQUFBO0FBQUE7QUFDRUEsUUFBTUM7QUFEUixFQURhO0FBQUEsQ0FBZDs7QUFNQUMsT0FBT0gsT0FBUCxHQUFpQkEsT0FBakIiLCJmaWxlIjoiY29udGFjdHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgQ29udGFjdCA9IChwcm9wcykgPT4gKFxuXHQ8ZGl2PlxuXHRcdHtwcm9wcy5kZWFsZXJOYW1lfVxuXHQ8L2Rpdj5cbik7XG5cbndpbmRvdy5Db250YWN0ID0gQ29udGFjdDsiXX0=

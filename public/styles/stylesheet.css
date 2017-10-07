@@ -429,10 +429,16 @@ footer {
 
 /* filter */
 
+.filter-component {
+	font-family: 'Monsal Gothic Bold';
+	font-weight: 600;
+}
+
 .filter-outer-container {
 	margin-top: 2px;
 	display: flex;
-	justify-content: center;
+/*	justify-content: center;*/
+
 }
 
 .filter-inner-container {

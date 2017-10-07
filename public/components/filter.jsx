@@ -3,7 +3,7 @@ var Filter = props =>
 		<div className="filter-inner-container">
 			<div className="filter-component">
 				<ul>
-					<li className="blue">
+					<li className="blue dealer-numbers">
 						<span />
 						{props.dealerTotal} dealers in {props.dealer.zipcode}
 					</li>

@@ -37,6 +37,7 @@ footer {
 .contact-label-row,
 .filter-inner-container,
 .card-top,
+.outer-nav-bar,
 .nav-top-first,
 .nav-top-second,
 .container-custom,
@@ -59,7 +60,7 @@ footer {
 }
 
 .contact-top,
-.nav-top-first {
+.navbar-fixed-top {
 	background-color: #083c8a;
 	color: white;
 }
@@ -117,6 +118,7 @@ footer {
 .inner-nav-container {
 	flex-wrap: wrap;
 	justify-content: space-between;
+	width: 90%;
 }
 
 .navbar-header img {
@@ -125,6 +127,7 @@ footer {
 
 .outer-nav-bar {
 	width: 100%;
+	justify-content: center;
 	position: fixed;
 	top: 50px;
 	left: 0;
@@ -143,6 +146,10 @@ footer {
 	top: 0;
 	left: 0;
 	z-index: 9996;
+}
+
+.nav-top-first {
+	width: 90%;
 }
 
 .nav-top-first span {

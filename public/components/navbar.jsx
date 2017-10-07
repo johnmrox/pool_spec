@@ -1,6 +1,6 @@
 var Nav = props =>
   <nav className="navbar outer-nav-bar">
-    <div className="section-nav container-fluid inner-nav-container">
+    <div className="inner-nav-container">
       <div className="navbar-header logo-container">
         <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span className="glyphicon glyphicon-menu-hamburger" />

@@ -1,5 +1,5 @@
 var TopBar = props =>
-  <nav className="outer-top-bar navbar navbar-fixed-top">
+  <nav className="outer-top-bar navbar">
     <div className="container-fluid nav-top-first top-bar-container">
       <ul className="nav navbar-nav nav-top top-bar-item-container">
         <li>

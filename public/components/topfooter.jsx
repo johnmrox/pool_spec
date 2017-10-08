@@ -1,5 +1,5 @@
 var TopFooter = props =>
-	<div className="test outer-footer site-footer">
+	<div className="test outer-footer">
 		<div className="footer-top-container">
 			<div>
 				<a href="#">

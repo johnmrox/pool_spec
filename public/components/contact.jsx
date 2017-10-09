@@ -32,7 +32,7 @@ var Contact = props =>
 					</div>
 					<div className="form-group contact-form-label phone-label">
 						<div className="contact-label-row">
-							<label>Phone Number</label>
+							<label>Phone number</label>
 
 							<span className={`teal ${props.contactProperties.number ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
@@ -46,7 +46,7 @@ var Contact = props =>
 					</div>
 					<div className="form-group contact-form-label">
 						<div className="contact-label-row">
-							<label>Email Address</label>
+							<label>Email address</label>
 
 							<span className={`teal ${props.contactProperties.address ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
@@ -61,7 +61,7 @@ var Contact = props =>
 					</div>
 					<div className="form-group contact-form-label">
 						<div className="contact-label-row">
-							<label>Comments or Questions</label>
+							<label>Comments or questions</label>
 							<p className="optional gray">Optional</p>
 						</div>
 						<textarea

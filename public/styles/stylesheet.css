@@ -511,6 +511,10 @@ footer {
 	}*/
 
 @media (max-width: 980px) {
+	body {
+		padding-top: 59px;
+	}
+
 	.top-bar-container,
 	.top-bar-item-container {
 		display: flex;

@@ -27,6 +27,8 @@ footer {
 	background-color: #f7f7f9;
 }
 
+$gray: #969393;
+
 .outer-top-bar {
 	margin: 0;
 }
@@ -91,7 +93,7 @@ footer {
 }
 
 .background-image-main {
-	background-image: url('../img/background-top.png');
+	background-image: url('../../img/background-top.png');
 	height: 12vh;
 	background-size: cover;
 	background-position: center;
@@ -237,6 +239,9 @@ footer {
 	top: 0;
 	right: 0;
 	font-size: 17px;
+	&:hover {
+		color: $gray;
+	}
 }
 
 .optional {

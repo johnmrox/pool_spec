@@ -122,8 +122,10 @@ footer {
 	width: 90%;
 }
 
-.navbar-header img {
-	width: 180px;
+.navbar-header {
+	img {
+		width: 180px;
+	}
 }
 
 .outer-nav-bar {
@@ -137,18 +139,24 @@ footer {
 	border-bottom: solid lightgray 3px;
 }
 
-.navbar-list span {
-	display: none;
+.navbar-list {
+	span {
+		display: none;
+	}
 }
 
-.navbar-list span {
-	display: none;
+.navbar-list {
+	span {
+		display: none;
+	}
 }
 
 /* keep below navbar list span */
-.find-pool-pro span {
-	display: inline;
-	padding-left: 0;
+.find-pool-pro {
+	span {
+		display: inline;
+		padding-left: 0;
+	}
 }
 
 .inner-nav-container li:last-child div {
@@ -174,8 +182,10 @@ footer {
 	width: 90%;
 }
 
-.nav-top-first span {
-	padding-right: 0;
+.nav-top-first {
+	span {
+		padding-right: 0;
+	}
 }
 
 .nav-top-first,
@@ -183,12 +193,16 @@ footer {
 	justify-content: flex-end;
 }
 
-.nav-top-second a {
-	margin-right: auto;
+.nav-top-second {
+	a {
+		margin-right: auto;
+	}
 }
 
-.nav-top-second img {
-	width: 200px;
+.nav-top-second {
+	img {
+		width: 200px;
+	}
 }
 
 .nav-top > li > a {
@@ -291,8 +305,10 @@ footer {
 	font-size: 12px;
 }
 
-.contact-button-container button {
-	outline: none;
+.contact-button-container {
+	button {
+		outline: none;
+	}
 }
 
 .phone-label {
@@ -303,9 +319,11 @@ footer {
 	justify-content: space-between;
 }
 
-.contact-label-row span {
-	font-size: 17px;
-	padding-right: 0;
+.contact-label-row {
+	span {
+		font-size: 17px;
+		padding-right: 0;
+	}
 }
 
 .contact-button-container {
@@ -332,9 +350,11 @@ footer {
 	flex-direction: column;
 }
 
-.send-email-container p {
-	padding-top: 20px;
-	align-self: center;
+.send-email-container {
+	p {
+		padding-top: 20px;
+		align-self: center;
+	}
 }
 
 /* dealer entry */
@@ -452,8 +472,10 @@ footer {
 	list-style: none;
 }
 
-.footer-top-container span {
-	padding: 5px;
+.footer-top-container {
+	span {
+		padding: 5px;
+	}
 }
 
 .footer-top-container span:first-child {
@@ -468,11 +490,10 @@ footer {
 
 .footer-nav a {
 	color: #fff;
-}
-
-.footer-nav a:hover {
-	color: #b2b2b2;
-	text-decoration: none;
+	&:hover {
+		color: #b2b2b2;
+		text-decoration: none;
+	}
 }
 
 .outer-top-footer {
@@ -600,13 +621,17 @@ footer {
 		display: inline;
 	}
 
-	.navbar-list span {
-		display: inline;
+	.navbar-list {
+		span {
+			display: inline;
+		}
 	}
 
-	.navbar-list li {
-		background-color: #f7f7f9;
-		border: 1px solid white;
+	.navbar-list {
+		li {
+			background-color: #f7f7f9;
+			border: 1px solid white;
+		}
 	}
 
 	/* contact */
@@ -619,16 +644,20 @@ footer {
 		flex-direction: column;
 	}
 
-	.send-email-container p {
-		align-self: flex-end;
+	.send-email-container {
+		p {
+			align-self: flex-end;
+		}
 	}
 
 	.send-email-2 {
 		display: inline-block;
 	}
 
-	.contact-checkbox-container li {
-		list-style: none;
+	.contact-checkbox-container {
+		li {
+			list-style: none;
+		}
 	}
 
 	.contact-checkbox-container,
@@ -651,8 +680,10 @@ footer {
 		flex: 1 1;
 	}
 
-	.credential-component li {
-		display: block;
+	.credential-component {
+		li {
+			display: block;
+		}
 	}
 
 	/* dealer */
@@ -675,16 +706,22 @@ footer {
 		color: white;
 	}
 
-	.phone-number-container span {
-		color: navy;
+	.phone-number-container {
+		span {
+			color: navy;
+		}
 	}
 
-	.phone-number-container label {
-		color: #fff;
-		font-size: 15px;
+	.phone-number-container {
+		label {
+			color: #fff;
+			font-size: 15px;
+		}
 	}
 
-	.phone-number-container h3 {
-		margin: 10px;
+	.phone-number-container {
+		h3 {
+			margin: 10px;
+		}
 	}
 }

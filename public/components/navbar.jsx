@@ -2,14 +2,14 @@ var Nav = props =>
   <nav className="navbar outer-nav-bar">
     <div className="inner-nav-container">
       <div className="navbar-header logo-container">
-        <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        {/*<button type="button" className="navbar-toggle">
           <span className="glyphicon glyphicon-menu-hamburger" />
-        </button>
+        </button>*/}
         <a href="#">
           <img alt="logo" className="nav-logo" src="public/img/logo.png" />
         </a>
       </div>
-      <div className="collapse navbar-collapse navbar-list" id="myNavbar">
+      <div className="navbar-list">
         <ul className="nav navbar-nav navbar-list-items">
           <li className="li-flex">
             <a href="#">Pools & Spas</a>
@@ -33,6 +33,17 @@ var Nav = props =>
             </div>
           </li>
         </ul>
+      </div>
+      <div className="find-pro-min-container">
+        <div className="button find-pro-min">
+          <span className="glyphicon glyphicon-map-marker" />
+          Find A Pro
+        </div>
+      </div>
+      <div className="menu-expand">
+        <div className="menu-button-line" />
+        <div className="menu-button-line" />
+        <div className="menu-button-line" />
       </div>
     </div>
   </nav>;

@@ -23,26 +23,38 @@ var Nav = props =>
         </div>
       </div>
       <div className={`navbar-list ${props.hideMenu}`}>
+        <div className={`menu-close-button teal`} onClick={props.toggleMenu}>
+          <p className="fa fa-close">&#160;</p>
+        </div>
         <ul className="nav navbar-nav navbar-list-items">
-          <li className="li-flex">
-            <a href="#">Menu</a>
-            <span className="glyphicon glyphicon-chevron-right teal" />
+          <li className="full-hide">
+            <a className="full-hide" href="#">
+              MENU
+            </a>
           </li>
           <li className="li-flex">
-            <a href="#">Pools & Spas</a>
-            <span className="glyphicon glyphicon-chevron-right teal" />
+            <div className="li-container">
+              <a href="#">Pools & Spas</a>
+              <span className="glyphicon glyphicon-chevron-right teal" />
+            </div>
           </li>
           <li className="li-flex">
-            <a href="#">Supplies</a>
-            <span className="glyphicon glyphicon-chevron-right teal" />
+            <div className="li-container">
+              <a href="#">Supplies</a>
+              <span className="glyphicon glyphicon-chevron-right teal" />
+            </div>
           </li>
           <li className="li-flex">
-            <a href="#">Resources</a>
-            <span className="glyphicon glyphicon-chevron-right teal" />
+            <div className="li-container">
+              <a href="#">Resources</a>
+              <span className="glyphicon glyphicon-chevron-right teal" />
+            </div>
           </li>
           <li className="li-flex">
-            <a href="#">Services</a>
-            <span className="glyphicon glyphicon-chevron-right teal" />
+            <div className="li-container">
+              <a href="#">Services</a>
+              <span className="glyphicon glyphicon-chevron-right teal" />
+            </div>
           </li>
           <li>
             <div href="#" className="button find-pool-pro">

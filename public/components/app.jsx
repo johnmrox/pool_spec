@@ -20,13 +20,16 @@ class App extends React.Component {
 			dealerName: '',
 			dealerList: window.dealerData.dealers,
 			totalDealers: 0,
-			toggled: ''
+			toggled: '',
+			showMenu: 'showing',
+			hideMenu: 'hiding'
 		};
 		this.handleFilterChange = this.handleFilterChange.bind(this);
 		this.handleFormInputChange = this.handleFormInputChange.bind(this);
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
 		this.handleButtonClick = this.handleButtonClick.bind(this);
+		this.toggleMenu = this.toggleMenu.bind(this);
 	}
 
 	componentDidMount() {
@@ -46,7 +49,6 @@ class App extends React.Component {
 
 	handleFormInputChange(e) {
 		let name = e.target.name;
-
 		let contactForm = Object.assign({}, this.state.contactForm);
 
 		contactForm[name] = e.target.value;
@@ -65,6 +67,17 @@ class App extends React.Component {
 
 	closeModal() {
 		this.setState({ isModalOpen: false });
+	}
+
+	toggleMenu() {
+		console.log('this.state.showMenu: ', this.state.showMenu, 'this.state.hideMenu: ', this.state.hideMenu);
+		let shownState = this.state.showMenu === 'showing' ? 'hiding' : 'showing';
+		let hiddenState = this.state.hideMenu === 'hiding' ? 'showing' : 'hiding';
+
+		this.setState({
+			showMenu: shownState,
+			hideMenu: hiddenState
+		});
 	}
 
 	handleFilterChange(e) {
@@ -199,7 +212,7 @@ class App extends React.Component {
 				</Modal>
 				<div className="outer-positioning-container">
 					<TopBar />
-					<Nav />
+					<Nav toggleMenu={this.toggleMenu} showMenu={this.state.showMenu} hideMenu={this.state.hideMenu} />
 					<div className="background-image-main" />
 					<div className="container-custom">
 						<Filter

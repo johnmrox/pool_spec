@@ -303,8 +303,8 @@ footer {
 
 .contact-card-container {
 	height: 100%;
-	max-width: 500px;
-	min-width: 300px;
+	// max-width: 500px;
+	min-width: 350px;
 }
 
 .contact-top-container {
@@ -670,9 +670,9 @@ footer {
 		order: 3;
 	}
 
-	.container-custom {
-		width: 50%;
-	}
+	// .container-custom {
+	// 	width: 50%;
+	// }
 }
 
 @media (max-width: 780px) {
@@ -707,6 +707,10 @@ footer {
 	// .navbar-list {
 	// 	display: none;
 	// }
+
+	.container-custom {
+		width: 95%;
+	}
 
 	.li-flex {
 		justify-content: space-between;

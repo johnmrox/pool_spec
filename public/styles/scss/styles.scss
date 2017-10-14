@@ -813,6 +813,9 @@ footer {
 
 @media (max-width: 780px) {
 	/* setup */
+	body {
+		padding-top: 55px;
+	}
 
 	.li-flex,
 	.contact-checkbox-container,

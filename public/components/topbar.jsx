@@ -1,7 +1,7 @@
 var TopBar = props =>
   <nav className="outer-top-bar">
-    <div className="container-fluid nav-top-first top-bar-container">
-      <ul className="nav navbar-nav nav-top top-bar-item-container">
+    <div className="x1-container">
+      <ul className="footer-list">
         <li>
           <a href="#">Dealers and Distributors</a>
         </li>

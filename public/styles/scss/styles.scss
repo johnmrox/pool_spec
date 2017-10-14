@@ -7,7 +7,7 @@
 }
 
 body {
-	padding-top: 123px;
+	padding-top: 113px;
 }
 
 p {
@@ -31,6 +31,8 @@ footer {
 	margin: 0;
 }
 
+.x1-container,
+.outer-top-bar,
 .nav-button-container,
 .inner-nav-container,
 .outer-positioning-container,
@@ -146,7 +148,7 @@ footer {
 	width: 100%;
 	justify-content: center;
 	position: fixed;
-	top: 50px;
+	top: 40px;
 	left: 0;
 	z-index: 9997;
 	background-color: white;
@@ -205,6 +207,8 @@ footer {
 	top: 0;
 	left: 0;
 	z-index: 9996;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu-close-button p {
@@ -221,6 +225,33 @@ footer {
 	}
 }
 
+.x1-container {
+	width: 90%;
+	padding: 10px;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.x1-container a {
+	color: white;
+	&:hover {
+		color: #b2b2b2;
+		text-decoration: none;
+	}
+}
+
+.x1-container ul {
+	margin: 0;
+}
+
+.x1-container > ul > li {
+	display: inline-block;
+}
+
+.x1-container > ul > li:first-child {
+	padding-right: 40px;
+}
+
 .navbar-list > div {
 	display: none;
 }
@@ -231,6 +262,22 @@ footer {
 
 .nav-top-first {
 	width: 90%;
+}
+
+.top-bar-container a {
+	text-decoration: none;
+}
+
+.top-bar-container ul li {
+	padding: 15px;
+	display: inline-block;
+	&:hover {
+		color: gray;
+	}
+}
+
+.top-bar-container li:nth-child(2) {
+	padding-right: 0;
 }
 
 .nav-top-first {
@@ -650,6 +697,42 @@ footer {
 		padding-top: 71px;
 	}
 
+	// .x1-container > ul > li {
+	// 	display: inline-block;
+	// }
+
+	// .nav-top-first {
+	// 	width: 70%;
+	// }
+
+	.top-bar-container {
+		padding: 10px;
+	}
+
+	.top-bar-container ul li {
+		padding: 0;
+	}
+
+	.x1-container {
+		border-bottom: 1px solid #fff;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .x1-container li {
+	// 	padding: 0;
+	// }
+
+	.x1-container > ul > li:first-child {
+		padding-right: 0;
+	}
+
+	.x1-container li:not(:first-child):before {
+		content: '|';
+		padding: 0 10px;
+		color: #fff;
+	}
+
 	.navbar-list-items {
 		li {
 			padding: 15px 10px;
@@ -690,6 +773,8 @@ footer {
 
 	.outer-top-bar {
 		background-color: #216dde;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.outer-nav-bar {
@@ -852,9 +937,9 @@ footer {
 		display: inline-block;
 	}
 
-	.top-bar-item-container li a {
-		padding: 10px;
-	}
+	// .top-bar-item-container li a {
+	// 	padding: 10px;
+	// }
 
 	.top-nav-item {
 		display: inline-block;

@@ -580,9 +580,25 @@ footer {
 
 /* filter */
 
+.credential-item {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .filter-component {
 	font-family: 'Monsal Gothic Bold';
 	font-weight: 600;
+}
+
+.filter-component div:nth-child(1) {
+	border-right: 1px solid lightgray;
+	padding-left: 5px;
+	padding-right: 10px;
+}
+
+.filter-component div:nth-child(2) {
+	padding-left: 10px;
+	padding-right: 5px;
 }
 
 .filter-outer-container {
@@ -591,12 +607,17 @@ footer {
 	/*	justify-content: center;*/
 }
 
+.filter-header {
+	display: inline-block;
+}
+
 .filter-inner-container {
 	padding: 20px 0;
 	margin: 0 20px 20px 20px;
 	color: #000;
 	border-radius: 5px;
 	justify-content: center;
+	align-items: center;
 	background-color: #f7f7f9;
 	flex: 1;
 }
@@ -612,9 +633,9 @@ footer {
 		justify-content: center
 	}*/
 
-// .full-hide {
-// 	display: none;
-// }
+.full-hide {
+	display: none;
+}
 
 // .full-hide a {
 // 	color: blue;
@@ -633,6 +654,28 @@ footer {
 		li {
 			padding: 15px 10px;
 		}
+	}
+
+	// .filter-component div:nth-child(1) {
+	// 	padding-right: 5px;
+	// }
+
+	// .filter-component div:nth-child(2) {
+	// 	padding-left: 5px;
+	// }
+
+	.filter-component div:nth-child(1) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.filter-component div:nth-child(2) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.credential-item {
+		padding: 0;
 	}
 
 	.top-bar-container,
@@ -717,7 +760,55 @@ footer {
 	// }
 
 	.container-custom {
-		width: 95%;
+		width: 100%;
+	}
+
+	.filter-component {
+		display: flex;
+	}
+
+	.filter-component div:nth-child(1) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	.filter-component div:nth-child(2) {
+		background-color: #fff;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border-top: 1px solid lightgray;
+	}
+
+	.filter-component div:nth-child(3) {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		border: 1px solid lightgray;
+		border-bottom: 0;
+	}
+
+	.filter-outer-container {
+		background-color: #f7f7f9;
+	}
+
+	.filter-inner-container {
+		background-color: #f7f7f9;
+		align-items: stretch;
+		font-size: 15px;
+	}
+
+	.filter-header {
+		flex-grow: 1;
+		text-align: center;
+	}
+
+	.credential-component {
+		border: 1px solid lightgray;
+		background-color: #fff;
+		padding: 7px;
+	}
+
+	.credential-item {
+		padding: 10px;
 	}
 
 	.li-flex {
@@ -857,6 +948,14 @@ footer {
 	}
 
 	/* filter */
+
+	// .filter-outer-container {
+	// 	width: 100%;
+	// }
+
+	// .container-customer {
+	// 	margin: 0;
+	// }
 
 	.filter-inner-container {
 		flex-direction: column;

@@ -20,7 +20,7 @@ var Contact = props =>
 					<div className="form-group contact-form-label">
 						<div className="contact-label-row">
 							<label className="icon-label">First and last name</label>
-							<span className={`teal ${props.contactProperties.name ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
+							<span className={`accent ${props.contactProperties.name ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
 						<input
 							type="text"
@@ -34,7 +34,9 @@ var Contact = props =>
 						<div className="contact-label-row">
 							<label>Phone number</label>
 
-							<span className={`teal ${props.contactProperties.number ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
+							<span
+								className={`accent ${props.contactProperties.number ? `fa fa-check-circle-o` : `fa fa-circle-o`}`}
+							/>
 						</div>
 						<input
 							type="text"
@@ -48,7 +50,9 @@ var Contact = props =>
 						<div className="contact-label-row">
 							<label>Email address</label>
 
-							<span className={`teal ${props.contactProperties.address ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
+							<span
+								className={`accent ${props.contactProperties.address ? `fa fa-check-circle-o` : `fa fa-circle-o`}`}
+							/>
 						</div>
 
 						<input
@@ -112,9 +116,9 @@ var Contact = props =>
 					</div>
 				</form>
 				<div className="send-email-container">
-					<p className="send-email-2 teal">Send</p>
+					<p className="send-email-2 accent">Send</p>
 					<p className="send-email-1">
-						Send my email<span className="glyphicon glyphicon-chevron-right teal" />
+						Send my email<span className="glyphicon glyphicon-chevron-right accent" />
 					</p>
 				</div>
 			</div>

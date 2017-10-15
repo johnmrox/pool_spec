@@ -23,7 +23,7 @@ var Nav = props =>
         </div>
       </div>
       <div className={`navbar-list ${props.hideMenu}`}>
-        <div className={`menu-close-button teal`} onClick={props.toggleMenu}>
+        <div className={`menu-close-button accent`} onClick={props.toggleMenu}>
           <p className="fa fa-close">&#160;</p>
         </div>
         <ul className="nav navbar-nav navbar-list-items">
@@ -35,25 +35,25 @@ var Nav = props =>
           <li className="li-flex">
             <div className="li-container">
               <a href="#">Pools & Spas</a>
-              <span className="glyphicon glyphicon-chevron-right teal" />
+              <span className="glyphicon glyphicon-chevron-right accent" />
             </div>
           </li>
           <li className="li-flex">
             <div className="li-container">
               <a href="#">Supplies</a>
-              <span className="glyphicon glyphicon-chevron-right teal" />
+              <span className="glyphicon glyphicon-chevron-right accent" />
             </div>
           </li>
           <li className="li-flex">
             <div className="li-container">
               <a href="#">Resources</a>
-              <span className="glyphicon glyphicon-chevron-right teal" />
+              <span className="glyphicon glyphicon-chevron-right accent" />
             </div>
           </li>
           <li className="li-flex">
             <div className="li-container">
               <a href="#">Services</a>
-              <span className="glyphicon glyphicon-chevron-right teal" />
+              <span className="glyphicon glyphicon-chevron-right accent" />
             </div>
           </li>
           <li>

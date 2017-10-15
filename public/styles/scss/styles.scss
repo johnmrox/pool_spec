@@ -138,6 +138,12 @@ footer {
 	align-items: center;
 }
 
+.inner-nav-container a {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 .navbar-header {
 	img {
 		width: 180px;
@@ -938,6 +944,10 @@ footer {
 				display: inline;
 			}
 		}
+	}
+
+	.navbar-list li a:hover {
+		color: #000;
 	}
 
 	.full-hide {

@@ -3,9 +3,6 @@ var Nav = props =>
     <div className="inner-nav-container">
       <div className={`nav-button-container ${props.showMenu}`}>
         <div className="navbar-header top-nav-item">
-          {/*<button type="button" className="navbar-toggle">
-          <span className="glyphicon glyphicon-menu-hamburger" />
-        </button>*/}
           <a href="#">
             <img alt="logo" className="nav-logo" src="public/img/logo.png" />
           </a>

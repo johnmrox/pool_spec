@@ -761,6 +761,10 @@ footer {
 		padding: 0;
 	}
 
+	.filter-component div:nth-child(2) span {
+		padding-right: 0;
+	}
+
 	.top-bar-container,
 	.top-bar-item-container {
 		display: flex;
@@ -811,7 +815,7 @@ footer {
 	// }
 }
 
-@media (max-width: 780px) {
+@media (max-width: 759px) {
 	/* setup */
 	body {
 		padding-top: 55px;

@@ -70,7 +70,6 @@ class App extends React.Component {
 	}
 
 	toggleMenu() {
-		console.log('this.state.showMenu: ', this.state.showMenu, 'this.state.hideMenu: ', this.state.hideMenu);
 		let shownState = this.state.showMenu === 'showing' ? 'hiding' : 'showing';
 		let hiddenState = this.state.hideMenu === 'hiding' ? 'showing' : 'hiding';
 

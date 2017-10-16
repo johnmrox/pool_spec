@@ -119,8 +119,10 @@ footer {
 	border-radius: 3px;
 }
 
-.find-pro-min span {
-	padding-left: 0;
+.find-pro-min {
+	span {
+		padding-left: 0;
+	}
 }
 
 /*. outer positioning */
@@ -132,15 +134,13 @@ footer {
 /* navbar */
 
 .inner-nav-container {
-	/*	flex-wrap: wrap;*/
 	justify-content: space-between;
 	width: 90%;
 	align-items: center;
-}
-
-.inner-nav-container a {
-	&:hover {
-		text-decoration: none;
+	a {
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -158,12 +158,19 @@ footer {
 	left: 0;
 	z-index: 9997;
 	background-color: $white;
-	border-bottom: solid lightgray 3px;
+	border-bottom: 3px solid lightgray;
 }
 
 .navbar-list {
+	position: relative;
 	span {
 		display: none;
+	}
+	> div {
+		display: none;
+	}
+	ul {
+		overflow: hidden;
 	}
 }
 
@@ -187,13 +194,12 @@ footer {
 	border-radius: 3px;
 }
 
-.navbar-list {
-	position: relative;
-}
-
 .navbar-list-items {
 	align-items: center;
 	justify-content: space-between;
+	> li:first-child {
+		display: none;
+	}
 }
 
 .outer-top-bar {
@@ -206,10 +212,6 @@ footer {
 	align-items: center;
 }
 
-.menu-close-button p {
-	font-size: 20px;
-}
-
 .menu-close-button {
 	position: absolute;
 	top: 10px;
@@ -218,6 +220,7 @@ footer {
 	&:hover {
 		color: $color-tertiary;
 	}
+	font-size: 20px;
 }
 
 .x1-container {
@@ -225,57 +228,45 @@ footer {
 	padding: 10px;
 	justify-content: flex-end;
 	align-items: center;
-}
-
-.x1-container a {
-	color: $color-font-secondary;
-	&:hover {
-		color: $color-accent-secondary;
-		text-decoration: none;
+	a {
+		color: $color-font-secondary;
+		&:hover {
+			color: $color-accent-secondary;
+			text-decoration: none;
+		}
 	}
-}
-
-.x1-container ul {
-	margin: 0;
-}
-
-.x1-container > ul > li {
-	display: inline-block;
+	ul {
+		margin: 0;
+		li {
+			display: inline-block;
+		}
+	}
 }
 
 .x1-container > ul > li:first-child {
 	padding-right: 40px;
 }
 
-.navbar-list > div {
-	display: none;
-}
-
-.navbar-list ul {
-	overflow: hidden;
+.top-bar-container {
+	ul {
+		li {
+			padding: 15px;
+			display: inline-block;
+			&:hover {
+				color: $color-accent-secondary;
+			}
+			&:nth-child(2) {
+				padding-right: 0;
+			}
+		}
+	}
+	a {
+		text-decoration: none;
+	}
 }
 
 .nav-top-first {
 	width: 90%;
-}
-
-.top-bar-container a {
-	text-decoration: none;
-}
-
-.top-bar-container ul li {
-	padding: 15px;
-	display: inline-block;
-	&:hover {
-		color: $color-accent-secondary;
-	}
-}
-
-.top-bar-container li:nth-child(2) {
-	padding-right: 0;
-}
-
-.nav-top-first {
 	span {
 		padding-right: 0;
 	}
@@ -290,20 +281,25 @@ footer {
 	a {
 		margin-right: auto;
 	}
-}
-
-.nav-top-second {
 	img {
 		width: 200px;
 	}
 }
 
-.nav-top > li > a {
-	color: $white;
+.nav-top {
+	> li {
+		> a {
+			color: $white;
+		}
+	}
 }
 
-.nav-list > li > a {
-	color: $white;
+.nav-list {
+	> li {
+		> a {
+			color: $white;
+		}
+	}
 }
 
 .navbar-list-items {
@@ -337,10 +333,6 @@ footer {
 	width: 30%;
 }
 
-.navbar-list-items > li:first-child {
-	display: none;
-}
-
 /* dealer component */
 
 .flex-container {
@@ -362,7 +354,7 @@ footer {
 }
 
 .contact-top {
-	font-size: 12px;
+	font-size: $font-size-primary;
 	padding: 22px 0;
 }
 
@@ -377,7 +369,7 @@ footer {
 }
 
 .optional {
-	font-size: 12px;
+	font-size: $font-size-primary;
 }
 
 .contact-dealer-name {
@@ -385,7 +377,7 @@ footer {
 }
 
 .below-contact-header {
-	font-size: 12px;
+	font-size: $font-size-primary;
 	padding: 10px 0;
 }
 
@@ -422,10 +414,11 @@ footer {
 
 .contact-form-label label,
 .pool-spa-container label {
-	font-size: 12px;
+	font-size: $font-size-primary;
 }
 
 .contact-button-container {
+	padding-bottom: 10px;
 	button {
 		outline: none;
 	}
@@ -437,17 +430,10 @@ footer {
 
 .contact-label-row {
 	justify-content: space-between;
-}
-
-.contact-label-row {
 	span {
 		font-size: 17px;
 		padding-right: 0;
 	}
-}
-
-.contact-button-container {
-	padding-bottom: 10px;
 }
 
 .container-email,
@@ -468,9 +454,6 @@ footer {
 	border-top: 2px solid #ededed;
 	justify-content: center;
 	flex-direction: column;
-}
-
-.send-email-container {
 	p {
 		padding-top: 20px;
 		align-self: center;
@@ -504,7 +487,7 @@ footer {
 	text-align: center;
 	background-color: white;
 	font-size: 14px;
-	font-family: 'Monsal Gothic Bold';
+	font-family: $font-stack-primary;
 	font-weight: 600;
 	color: $color-accent-tertiary;
 	border-radius: 3px;
@@ -577,6 +560,12 @@ footer {
 	justify-content: center;
 	text-align: center;
 	align-items: center;
+	span {
+		padding: 5px;
+		&:first-child {
+			padding-left: 20px;
+		}
+	}
 }
 
 .footer-bottom-container {
@@ -589,30 +578,19 @@ footer {
 .footer-nav {
 	text-align: right;
 	list-style: none;
-}
-
-.footer-top-container {
-	span {
-		padding: 5px;
+	a {
+		color: $color-font-secondary;
+		&:hover {
+			color: $color-accent-secondary;
+			text-decoration: none;
+		}
 	}
-}
-
-.footer-top-container span:first-child {
-	padding-left: 20px;
 }
 
 .footer-nav li:not(:first-child):before {
 	content: '|';
 	padding: 0 10px;
 	color: $color-font-secondary;
-}
-
-.footer-nav a {
-	color: $color-font-secondary;
-	&:hover {
-		color: $color-accent-secondary;
-		text-decoration: none;
-	}
 }
 
 .outer-top-footer {
@@ -627,19 +605,19 @@ footer {
 }
 
 .filter-component {
-	font-family: 'Monsal Gothic Bold';
+	font-family: $font-stack-primary;
 	font-weight: 600;
-}
-
-.filter-component div:nth-child(1) {
-	border-right: 1px solid lightgray;
-	padding-left: 5px;
-	padding-right: 10px;
-}
-
-.filter-component div:nth-child(2) {
-	padding-left: 10px;
-	padding-right: 5px;
+	div {
+		&:nth-child(1) {
+			border-right: 1px solid lightgray;
+			padding-left: 5px;
+			padding-right: 10px;
+		}
+		&:nth-child(2) {
+			padding-left: 10px;
+			padding-right: 5px;
+		}
+	}
 }
 
 .filter-outer-container {
@@ -676,28 +654,40 @@ footer {
 		padding-top: 71px;
 	}
 
-	.top-bar-container {
-		padding: 10px;
+	.top-bar-container,
+	.top-bar-item-container {
+		display: flex;
 	}
 
-	.top-bar-container ul li {
-		padding: 0;
+	.top-bar-container {
+		padding: 10px;
+		justify-content: center;
+		border-bottom: 1px solid $white;
+		ul {
+			li {
+				padding: 0;
+			}
+		}
 	}
 
 	.x1-container {
 		border-bottom: 1px solid $white;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.x1-container > ul > li:first-child {
-		padding-right: 0;
-	}
-
-	.x1-container li:not(:first-child):before {
-		content: '|';
-		padding: 0 10px;
-		color: $color-font-secondary;
+		li {
+			&:not(:first-child):before {
+				content: '|';
+				padding: 0 10px;
+				color: $color-font-secondary;
+			}
+		}
+		> ul {
+			> li {
+				&:first-child {
+					padding-right: 0;
+				}
+			}
+		}
 	}
 
 	.navbar-list-items {
@@ -706,45 +696,33 @@ footer {
 		}
 	}
 
-	.filter-component div:nth-child(1) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-
-	.filter-component div:nth-child(2) {
-		padding-left: 0;
-		padding-right: 0;
+	.filter-component {
+		div {
+			&:nth-child(1) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+			&:nth-child(2) {
+				padding-left: 0;
+				padding-right: 0;
+				span {
+					padding-right: 0;
+				}
+			}
+		}
 	}
 
 	.credential-item {
 		padding: 0;
 	}
 
-	.filter-component div:nth-child(2) span {
-		padding-right: 0;
-	}
-
-	.top-bar-container,
-	.top-bar-item-container {
-		display: flex;
-	}
-
-	.top-bar-container {
-		justify-content: center;
-		border-bottom: 1px solid $white;
-	}
-
 	.outer-top-bar {
+		order: 2;
 		background-color: $color-tertiary;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.outer-nav-bar {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 9997;
+		position: static;
+		margin: 0;
 	}
 
 	.outer-nav-bar {
@@ -757,12 +735,6 @@ footer {
 
 	.outer-footer {
 		order: 1;
-	}
-
-	.outer-top-bar {
-		order: 2;
-		position: static;
-		margin: 0;
 	}
 
 	.outer-top-footer {
@@ -805,23 +777,25 @@ footer {
 		display: flex;
 	}
 
-	.filter-component div:nth-child(1) {
-		padding-top: 5px;
-		padding-bottom: 5px;
-	}
-
-	.filter-component div:nth-child(2) {
-		background-color: $white;
-		padding-top: 5px;
-		padding-bottom: 5px;
-		border-top: 1px solid lightgray;
-	}
-
-	.filter-component div:nth-child(3) {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		border: 1px solid lightgray;
-		border-bottom: 0;
+	.filter-component {
+		div {
+			&:nth-child(1) {
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+			&:nth-child(2) {
+				background-color: $white;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				border-top: 1px solid lightgray;
+			}
+			&:nth-child(3) {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				border: 1px solid lightgray;
+				border-bottom: 0;
+			}
+		}
 	}
 
 	.filter-outer-container {
@@ -864,25 +838,30 @@ footer {
 		width: 100%;
 	}
 
-	.navbar-list > div {
-		display: block;
-	}
-
 	.find-pro-min-container {
 		display: block;
 	}
 
-	.navbar-list-items {
-		display: block;
-		margin: 0;
-	}
-
 	.navbar-list {
+		width: 100%;
+		border-top: 5px solid $color-accent;
+		border-bottom: 5px solid $color-accent;
+		span {
+			display: inline;
+		}
 		li {
+			background-color: $color-secondary;
+			border: 1px solid $white;
+			width: 100%;
+			padding: 20px;
+			font-size: 17px;
 			a {
 				color: gray;
 				display: inline;
 			}
+		}
+		> div {
+			display: block;
 		}
 	}
 
@@ -898,43 +877,24 @@ footer {
 		display: inline-block;
 	}
 
-	.navbar-list-items > li:first-child {
+	.navbar-list-items {
 		display: block;
-		background-color: $white;
-		text-align: center;
-	}
-
-	.navbar-list-items > li:first-child a {
-		font-weight: 500;
-		color: $color-tertiary;
+		margin: 0;
+		> li:first-child {
+			display: block;
+			background-color: $white;
+			text-align: center;
+			a {
+				font-weight: 500;
+				color: $color-tertiary;
+			}
+		}
 	}
 
 	.nav-button-container {
 		display: flex;
 		width: 95%;
 		justify-content: space-between;
-	}
-
-	.navbar-list {
-		span {
-			display: inline;
-		}
-	}
-
-	.navbar-list {
-		li {
-			background-color: $color-secondary;
-			border: 1px solid $white;
-			width: 100%;
-			padding: 20px;
-			font-size: 17px;
-		}
-	}
-
-	.navbar-list {
-		width: 100%;
-		border-top: 5px solid $color-accent;
-		border-bottom: 5px solid $color-accent;
 	}
 
 	.li-container {
@@ -1027,16 +987,10 @@ footer {
 		span {
 			color: $color-accent-tertiary;
 		}
-	}
-
-	.phone-number-container {
 		label {
 			color: $color-font-secondary;
 			font-size: 15px;
 		}
-	}
-
-	.phone-number-container {
 		h3 {
 			margin: 10px;
 		}

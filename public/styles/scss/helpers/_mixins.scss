@@ -1,0 +1,18 @@
+@mixin side-padding($left, $right) {
+	padding-left: $left;
+	padding-right: $right;
+}
+
+@mixin top-bottom-padding($top, $bottom) {
+	padding-top: $top;
+	padding-bottom: $bottom;
+}
+
+@mixin flexbox($display: flex, $direction: null, $wrap: null, $justify: null, $align: null) {
+	display: $display;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+	@content;
+}

@@ -1,3 +1,4 @@
+// colors
 $gray: #808080;
 $white: #fff;
 $black: #000;
@@ -11,20 +12,11 @@ $color-accent-tertiary: #000080;
 $color-accent-minor: #7aabdd;
 $color-font-secondary: #fff;
 
+// font
 $font-stack-primary: 'Monsal Gothic Bold';
 
 $font-size-primary: 12px;
 
-%cursor-pointer {
-	cursor: pointer;
-}
-
-@mixin side-padding($left, $right) {
-	padding-left: $left;
-	padding-right: $right;
-}
-
-@mixin top-bottom-padding($top, $bottom) {
-	padding-top: $top;
-	padding-bottom: $bottom;
-}
+// media queries
+$break-m: 980px;
+$break-s: 759px;

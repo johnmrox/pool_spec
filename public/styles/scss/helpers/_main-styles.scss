@@ -25,14 +25,14 @@ footer {
 	background-color: $color-secondary;
 }
 
-.footer-nav li,
-.filter-component li,
-.credential-component li {
-	display: inline;
+.send-email-2 {
+	display: none;
 }
 
-.send-email-2,
-.contact-checkbox-container,
+.contact-checkbox-container {
+	display: none;
+}
+
 .tap-to-call {
 	display: none;
 }
@@ -82,6 +82,9 @@ footer {
 
 .pool-spa-container {
 	@include flexbox($direction: column);
+	label {
+		font-size: $font-size-primary;
+	}
 }
 
 .find-pro-min-container {
@@ -348,7 +351,13 @@ footer {
 }
 
 .contact-no-button {
+	@extend %contact-button;
 	background-color: $color-secondary;
+}
+
+.contact-yes-button {
+	margin-right: 5px;
+	@extend %contact-button;
 }
 
 .button-clicked {
@@ -360,20 +369,10 @@ footer {
 	background-color: $color-secondary;
 }
 
-.contact-yes-button {
-	margin-right: 5px;
-}
-
-.contact-yes-button,
-.contact-no-button {
-	width: 50px;
-	border: 1px solid gray;
-	border-radius: 2px;
-}
-
-.contact-form-label label,
-.pool-spa-container label {
-	font-size: $font-size-primary;
+.contact-form-label {
+	label {
+		font-size: $font-size-primary;
+	}
 }
 
 .contact-button-container {
@@ -395,18 +394,15 @@ footer {
 	}
 }
 
-.container-email,
-.container-footer {
-	background-color: $color-secondary;
-}
-
 .container-email {
 	padding: 20px;
+	background-color: $color-secondary;
 }
 
 .container-footer {
 	margin-bottom: 0;
 	margin-top: 20px;
+	background-color: $color-secondary;
 }
 
 .send-email-container {
@@ -539,6 +535,9 @@ footer {
 			text-decoration: none;
 		}
 	}
+	li {
+		display: inline;
+	}
 }
 
 .footer-nav li:not(:first-child):before {
@@ -554,8 +553,7 @@ footer {
 /* filter */
 
 .credential-item {
-	padding-left: 5px;
-	padding-right: 5px;
+	@include side-padding(5px, 5px);
 }
 
 .filter-component {
@@ -565,14 +563,16 @@ footer {
 		&:nth-child(1) {
 			border-right: 1px solid lightgray;
 			@include side-padding(5px, 10px);
-			// padding-left: 5px;
-			// padding-right: 10px;
 		}
 		&:nth-child(2) {
 			@include side-padding(10px, 5px);
-			// padding-left: 10px;
-			// padding-right: 5px;
 		}
+	}
+	li {
+		display: inline;
+	}
+	ul {
+		margin-bottom: 0;
 	}
 }
 
@@ -595,9 +595,13 @@ footer {
 	flex: 1;
 }
 
-.filter-component ul,
-.credential-component ul {
-	margin-bottom: 0;
+.credential-component {
+	ul {
+		margin-bottom: 0;
+	}
+	li {
+		display: inline;
+	}
 }
 
 .full-hide {
@@ -650,13 +654,9 @@ footer {
 		div {
 			&:nth-child(1) {
 				@include side-padding(0, 0);
-				// padding-left: 0;
-				// padding-right: 0;
 			}
 			&:nth-child(2) {
 				@include side-padding(0, 0);
-				// padding-left: 0;
-				// padding-right: 0;
 				span {
 					padding-right: 0;
 				}
@@ -702,13 +702,27 @@ footer {
 
 	/*	.nav-top-first,*/
 
-	.navbar-list li:last-child,
-	.find-pool-pro,
-	.close-contact-button,
-	.container-footer,
-	.send-email-1,
-	.contact-button-container,
 	.pool-spa-container p {
+		display: none;
+	}
+
+	.contact-button-container {
+		display: none;
+	}
+
+	.send-email-1 {
+		display: none;
+	}
+
+	.container-footer {
+		display: none;
+	}
+
+	.close-contact-button {
+		display: none;
+	}
+
+	.find-pool-pro {
 		display: none;
 	}
 
@@ -762,6 +776,10 @@ footer {
 			width: 100%;
 			padding: 20px;
 			font-size: 17px;
+			&:last-child {
+				display: none;
+			}
+
 			a {
 				color: gray;
 				display: inline;
@@ -850,20 +868,14 @@ footer {
 		div {
 			&:nth-child(1) {
 				@include top-bottom-padding(5px, 5px);
-				// padding-top: 5px;
-				// padding-bottom: 5px;
 			}
 			&:nth-child(2) {
 				background-color: $white;
 				@include top-bottom-padding(5px, 5px);
-				// padding-top: 5px;
-				// padding-bottom: 5px;
 				border-top: 1px solid lightgray;
 			}
 			&:nth-child(3) {
 				@include top-bottom-padding(5px, 5px);
-				// padding-top: 5px;
-				// padding-bottom: 5px;
 				border: 1px solid lightgray;
 				border-bottom: 0;
 			}

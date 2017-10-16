@@ -14,3 +14,17 @@ $color-font-secondary: #fff;
 $font-stack-primary: 'Monsal Gothic Bold';
 
 $font-size-primary: 12px;
+
+%cursor-pointer {
+	cursor: pointer;
+}
+
+@mixin side-padding($left, $right) {
+	padding-left: $left;
+	padding-right: $right;
+}
+
+@mixin top-bottom-padding($top, $bottom) {
+	padding-top: $top;
+	padding-bottom: $bottom;
+}

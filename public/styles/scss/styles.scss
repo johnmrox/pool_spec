@@ -112,6 +112,7 @@ footer {
 }
 
 .find-pro-min-container {
+	@extend %cursor-pointer;
 	display: none;
 	color: $color-tertiary;
 	border: 2px solid $color-accent-minor;
@@ -181,6 +182,7 @@ footer {
 
 /* keep below navbar list span */
 .find-pool-pro {
+	@extend %cursor-pointer;
 	span {
 		display: inline;
 		padding-left: 0;
@@ -308,14 +310,9 @@ footer {
 	}
 }
 
-.find-pool-pro,
-.find-pro-min-container {
-	cursor: pointer;
-}
-
 .menu-expand {
 	display: none;
-	cursor: pointer;
+	@extend %cursor-pointer;
 }
 
 .menu-button-line {
@@ -610,12 +607,14 @@ footer {
 	div {
 		&:nth-child(1) {
 			border-right: 1px solid lightgray;
-			padding-left: 5px;
-			padding-right: 10px;
+			@include side-padding(5px, 10px);
+			// padding-left: 5px;
+			// padding-right: 10px;
 		}
 		&:nth-child(2) {
-			padding-left: 10px;
-			padding-right: 5px;
+			@include side-padding(10px, 5px);
+			// padding-left: 10px;
+			// padding-right: 5px;
 		}
 	}
 }
@@ -699,12 +698,14 @@ footer {
 	.filter-component {
 		div {
 			&:nth-child(1) {
-				padding-left: 0;
-				padding-right: 0;
+				@include side-padding(0, 0);
+				// padding-left: 0;
+				// padding-right: 0;
 			}
 			&:nth-child(2) {
-				padding-left: 0;
-				padding-right: 0;
+				@include side-padding(0, 0);
+				// padding-left: 0;
+				// padding-right: 0;
 				span {
 					padding-right: 0;
 				}
@@ -780,18 +781,21 @@ footer {
 	.filter-component {
 		div {
 			&:nth-child(1) {
-				padding-top: 5px;
-				padding-bottom: 5px;
+				@include top-bottom-padding(5px, 5px);
+				// padding-top: 5px;
+				// padding-bottom: 5px;
 			}
 			&:nth-child(2) {
 				background-color: $white;
-				padding-top: 5px;
-				padding-bottom: 5px;
+				@include top-bottom-padding(5px, 5px);
+				// padding-top: 5px;
+				// padding-bottom: 5px;
 				border-top: 1px solid lightgray;
 			}
 			&:nth-child(3) {
-				padding-top: 5px;
-				padding-bottom: 5px;
+				@include top-bottom-padding(5px, 5px);
+				// padding-top: 5px;
+				// padding-bottom: 5px;
 				border: 1px solid lightgray;
 				border-bottom: 0;
 			}

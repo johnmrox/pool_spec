@@ -5,12 +5,13 @@
 }
 
 body {
-	justify-content: center;
+	margin: 0 auto;
 	padding-top: 113px;
-	@include mq('m') {
+	max-width: $max-width;
+	@include breakpoint('m') {
 		padding-top: 71px;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		padding-top: 55px;
 	}
 }
@@ -63,7 +64,7 @@ footer {
 	@include flexbox($direction: column, $justify: center);
 	width: 90%;
 	margin: auto;
-	@include mq('s') {
+	@include breakpoint('s') {
 		width: 100%;
 	}
 }
@@ -77,7 +78,7 @@ footer {
 /* navbar */
 
 .li-container {
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox($justify: space-between);
 	}
 }
@@ -89,7 +90,7 @@ footer {
 	border: 2px solid $color-accent-minor;
 	padding: 7px;
 	border-radius: 3px;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: block;
 	}
 }
@@ -118,13 +119,13 @@ footer {
 			}
 		}
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		width: 100%;
 	}
 }
 
 .li-flex {
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox($justify: space-between);
 		width: 100%;
 	}
@@ -138,20 +139,18 @@ footer {
 
 .outer-nav-bar {
 	@include flexbox($justify: center);
+	max-width: $max-width;
 	width: 100%;
 	justify-content: center;
 	position: fixed;
 	top: 40px;
-	left: 0;
+	// left: 0;
 	z-index: 9997;
 	background-color: $white;
 	border-bottom: 3px solid lightgray;
-	@include mq('m') {
+	@include breakpoint('m') {
 		order: -1;
-		position: fixed;
 		top: 0;
-		left: 0;
-		z-index: 9997;
 	}
 }
 
@@ -166,7 +165,7 @@ footer {
 	ul {
 		overflow: hidden;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		width: 100%;
 		border-top: 5px solid $color-accent;
 		border-bottom: 5px solid $color-accent;
@@ -198,7 +197,7 @@ footer {
 
 .nav-button-container {
 	@include flexbox($align: center, $justify: space-between);
-	@include mq('s') {
+	@include breakpoint('s') {
 		width: 95%;
 	}
 }
@@ -210,7 +209,7 @@ footer {
 		display: inline;
 		padding-left: 0;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
@@ -223,12 +222,12 @@ footer {
 	li {
 		padding: 15px 20px;
 	}
-	@include mq('m') {
+	@include breakpoint('m') {
 		li {
 			padding: 15px 10px;
 		}
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: block;
 		margin: 0;
 		> li:first-child {
@@ -257,7 +256,7 @@ footer {
 .menu-expand {
 	display: none;
 	@extend %cursor-pointer;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: block;
 	}
 }
@@ -274,14 +273,14 @@ footer {
 }
 
 .top-nav-item {
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: inline-block;
 	}
 }
 
 //keep close to bottom of navbar rules
 .hiding {
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
@@ -307,7 +306,7 @@ footer {
 			}
 		}
 	}
-	@include mq('m') {
+	@include breakpoint('m') {
 		border-bottom: 1px solid $white;
 		justify-content: center;
 		align-items: center;
@@ -330,21 +329,19 @@ footer {
 
 .outer-top-bar {
 	@include flexbox($justify: center, $align :center);
+	max-width: $max-width;
 	width: 100%;
 	position: fixed;
 	top: 0;
-	left: 0;
+	// left: 0;
 	z-index: 9996;
 	margin: 0;
 	background-color: $color-primary;
 	color: $white;
-	@include mq('m') {
+	@include breakpoint('m') {
 		order: 2;
 		background-color: $color-tertiary;
-		justify-content: center;
-		align-items: center;
 		position: static;
-		margin: 0;
 	}
 }
 
@@ -352,7 +349,7 @@ footer {
 
 .flex-container {
 	@include flexbox($justify: center, $wrap: wrap);
-	@include mq('s') {
+	@include breakpoint('s') {
 		width: 95%;
 		margin: 0 auto;
 	}
@@ -361,7 +358,7 @@ footer {
 /* contact card */
 
 .own-spa-container {
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox($justify: flex-start);
 		justify-content: flex-start;
 	}
@@ -375,7 +372,7 @@ footer {
 		padding-top: 20px;
 		align-self: center;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		p {
 			align-self: flex-end;
 		}
@@ -383,21 +380,21 @@ footer {
 }
 
 .send-email-1 {
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
 
 .send-email-2 {
 	display: none;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: inline-block;
 	}
 }
 
 .contact-checkbox-container {
 	display: none;
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox;
 		padding-left: 0;
 		li {
@@ -408,7 +405,7 @@ footer {
 
 .tap-to-call {
 	display: none;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: inline-block;
 	}
 }
@@ -418,7 +415,7 @@ footer {
 	label {
 		font-size: $font-size-primary;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		p {
 			display: none;
 		}
@@ -450,13 +447,13 @@ footer {
 	&:hover {
 		color: $color-accent-secondary;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
 
 .no-padding-left {
-	@include mq('s') {
+	@include breakpoint('s') {
 		padding-left: 0;
 	}
 }
@@ -511,7 +508,7 @@ footer {
 	button {
 		outline: none;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
@@ -531,7 +528,7 @@ footer {
 .container-email {
 	padding: 20px;
 	background-color: $color-secondary;
-	@include mq('s') {
+	@include breakpoint('s') {
 		background-color: $white;
 	}
 }
@@ -540,7 +537,7 @@ footer {
 	margin-bottom: 0;
 	margin-top: 20px;
 	background-color: $color-secondary;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: none;
 	}
 }
@@ -557,7 +554,7 @@ footer {
 	padding: .5rem;
 	padding-bottom: 10px;
 	margin-bottom: 25px;
-	@include mq('s') {
+	@include breakpoint('s') {
 		border-radius: 0;
 		margin-bottom: 0;
 	}
@@ -591,7 +588,7 @@ footer {
 	span {
 		padding-left: 0;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		background-color: $color-tertiary;
 		display: inline-block;
 		color: $color-font-secondary;
@@ -619,7 +616,7 @@ footer {
 	margin-bottom: 10px;
 	border-bottom: 2px solid #ededed;
 	height: 90px;
-	@include mq('s') {
+	@include breakpoint('s') {
 		margin-bottom: 0;
 		border-bottom: 0;
 		height: 70px;
@@ -663,7 +660,7 @@ footer {
 	color: $color-font-secondary;
 	margin-top: 30px;
 	padding: 10px;
-	@include mq('m') {
+	@include breakpoint('m') {
 		order: 1;
 	}
 }
@@ -709,7 +706,7 @@ footer {
 
 .outer-top-footer {
 	margin-top: 0;
-	@include mq('m') {
+	@include breakpoint('m') {
 		order: 3;
 	}
 }
@@ -718,10 +715,10 @@ footer {
 
 .credential-item {
 	@include side-padding(5px, 5px);
-	@include mq('m') {
+	@include breakpoint('m') {
 		padding: 0;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		padding: 10px;
 	}
 }
@@ -744,7 +741,7 @@ footer {
 	ul {
 		margin-bottom: 0;
 	}
-	@include mq('m') {
+	@include breakpoint('m') {
 		div {
 			&:nth-child(1) {
 				@include side-padding(0, 0);
@@ -757,7 +754,7 @@ footer {
 			}
 		}
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox;
 		div {
 			&:nth-child(1) {
@@ -780,14 +777,14 @@ footer {
 .filter-outer-container {
 	@include flexbox;
 	margin-top: 2px;
-	@include mq('s') {
+	@include breakpoint('s') {
 		background-color: $color-secondary;
 	}
 }
 
 .filter-header {
 	display: inline-block;
-	@include mq('s') {
+	@include breakpoint('s') {
 		flex-grow: 1;
 		text-align: center;
 	}
@@ -801,14 +798,14 @@ footer {
 	border-radius: 5px;
 	background-color: $color-secondary;
 	flex: 1;
-	@include mq('s') {
+	@include breakpoint('s') {
 		@include flexbox($align: stretch, $direction: column);
 		font-size: 15px;
 	}
 }
 
 .credential-list-container {
-	@include mq('s') {
+	@include breakpoint('s') {
 		flex: 1 1;
 	}
 }
@@ -820,7 +817,7 @@ footer {
 	li {
 		display: inline;
 	}
-	@include mq('s') {
+	@include breakpoint('s') {
 		border: 1px solid lightgray;
 		background-color: $white;
 		padding: 7px;
@@ -832,7 +829,7 @@ footer {
 
 .full-hide {
 	display: none;
-	@include mq('s') {
+	@include breakpoint('s') {
 		display: inline-block;
 	}
 }

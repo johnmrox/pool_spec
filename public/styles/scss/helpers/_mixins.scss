@@ -17,7 +17,7 @@
 	@content;
 }
 
-@mixin mq($break) {
+@mixin breakpoint($break) {
 	$value: map-get($breakpoints, $break);
 
 	@media (max-width: $value) {

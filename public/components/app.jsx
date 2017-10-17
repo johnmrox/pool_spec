@@ -198,7 +198,7 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className="outer-container">
 				<Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
 					<Contact
 						dealerName={this.state.dealerName}

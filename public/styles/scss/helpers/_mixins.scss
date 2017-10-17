@@ -16,3 +16,16 @@
 	align-items: $align;
 	@content;
 }
+
+//media queries
+@mixin mq($break) {
+	@if $break == 'm' {
+		@media (max-width: $break-m) {
+			@content;
+		}
+	} @else if $break == 's' {
+		@media (max-width: $break-s) {
+			@content;
+		}
+	}
+}

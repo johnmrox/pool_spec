@@ -6,6 +6,13 @@
 
 body {
 	padding-top: 113px;
+	@include mq('m') {
+		padding-top: 71px;
+	}
+	@include mq('s') {
+		background-color: red;
+		padding-top: 55px;
+	}
 }
 
 p {
@@ -609,9 +616,9 @@ footer {
 }
 
 @media (max-width: $break-m) {
-	body {
-		padding-top: 71px;
-	}
+	// body {
+	// 	padding-top: 71px;
+	// }
 
 	.top-bar-container {
 		@include flexbox($justify: center);
@@ -696,9 +703,9 @@ footer {
 
 @media (max-width: $break-s) {
 	/* setup */
-	body {
-		padding-top: 55px;
-	}
+	// body {
+	// 	padding-top: 55px;
+	// }
 
 	/*	.nav-top-first,*/
 

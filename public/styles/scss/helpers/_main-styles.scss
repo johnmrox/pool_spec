@@ -177,6 +177,34 @@ footer {
 	ul {
 		overflow: hidden;
 	}
+	@include mq('s') {
+		width: 100%;
+		border-top: 5px solid $color-accent;
+		border-bottom: 5px solid $color-accent;
+		span {
+			display: inline;
+		}
+		li {
+			background-color: $color-secondary;
+			border: 1px solid $white;
+			width: 100%;
+			padding: 20px;
+			font-size: 17px;
+			&:last-child {
+				display: none;
+			}
+			a {
+				color: $gray;
+				display: inline;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+		> div {
+			display: block;
+		}
+	}
 }
 
 .nav-button-container {
@@ -802,36 +830,36 @@ footer {
 	// 	display: block;
 	// }
 
-	.navbar-list {
-		width: 100%;
-		border-top: 5px solid $color-accent;
-		border-bottom: 5px solid $color-accent;
-		span {
-			display: inline;
-		}
-		li {
-			background-color: $color-secondary;
-			border: 1px solid $white;
-			width: 100%;
-			padding: 20px;
-			font-size: 17px;
-			&:last-child {
-				display: none;
-			}
+	// .navbar-list {
+	// 	width: 100%;
+	// 	border-top: 5px solid $color-accent;
+	// 	border-bottom: 5px solid $color-accent;
+	// 	span {
+	// 		display: inline;
+	// 	}
+	// 	li {
+	// 		background-color: $color-secondary;
+	// 		border: 1px solid $white;
+	// 		width: 100%;
+	// 		padding: 20px;
+	// 		font-size: 17px;
+	// 		&:last-child {
+	// 			display: none;
+	// 		}
 
-			a {
-				color: gray;
-				display: inline;
-			}
-		}
-		> div {
-			display: block;
-		}
-	}
+	// 		a {
+	// 			color: gray;
+	// 			display: inline;
+	// 		}
+	// 	}
+	// 	> div {
+	// 		display: block;
+	// 	}
+	// }
 
-	.navbar-list li a:hover {
-		color: $black;
-	}
+	// .navbar-list li a:hover {
+	// 	color: $black;
+	// }
 
 	.full-hide {
 		display: inline-block;

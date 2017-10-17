@@ -795,6 +795,9 @@ footer {
 .filter-outer-container {
 	@include flexbox;
 	margin-top: 2px;
+	@include mq('s') {
+		background-color: $color-secondary;
+	}
 }
 
 .filter-header {
@@ -1100,9 +1103,9 @@ footer {
 	// 	}
 	// }
 
-	.filter-outer-container {
-		background-color: $color-secondary;
-	}
+	// .filter-outer-container {
+	// 	background-color: $color-secondary;
+	// }
 
 	.filter-inner-container {
 		@include flexbox($align: stretch, $direction: column);

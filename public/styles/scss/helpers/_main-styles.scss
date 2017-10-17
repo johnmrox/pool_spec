@@ -66,7 +66,7 @@ footer {
 }
 
 .gray {
-	color: gray;
+	color: $gray;
 }
 
 .accent {
@@ -88,6 +88,9 @@ footer {
 	@include flexbox($direction: column, $justify: center);
 	width: 90%;
 	margin: auto;
+	@include mq('s') {
+		width: 100%;
+	}
 }
 
 .pool-spa-container {
@@ -740,9 +743,9 @@ footer {
 		display: none;
 	}
 
-	.container-custom {
-		width: 100%;
-	}
+	// .container-custom {
+	// 	width: 100%;
+	// }
 
 	.credential-component {
 		border: 1px solid lightgray;

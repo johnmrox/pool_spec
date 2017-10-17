@@ -829,6 +829,14 @@ footer {
 	li {
 		display: inline;
 	}
+	@include mq('s') {
+		border: 1px solid lightgray;
+		background-color: $white;
+		padding: 7px;
+		li {
+			display: block;
+		}
+	}
 }
 
 .full-hide {
@@ -959,14 +967,14 @@ footer {
 	// 	width: 100%;
 	// }
 
-	.credential-component {
-		border: 1px solid lightgray;
-		background-color: $white;
-		padding: 7px;
-		li {
-			display: block;
-		}
-	}
+	// .credential-component {
+	// 	border: 1px solid lightgray;
+	// 	background-color: $white;
+	// 	padding: 7px;
+	// 	li {
+	// 		display: block;
+	// 	}
+	// }
 
 	// .credential-item {
 	// 	padding: 10px;

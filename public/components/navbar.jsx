@@ -53,7 +53,7 @@ var Nav = props =>
               <span className="glyphicon glyphicon-chevron-right accent" />
             </div>
           </li>
-          <li>
+          <li className="li-flex">
             <div href="#" className="button find-pool-pro">
               <span className="glyphicon glyphicon-map-marker" />Find A Pool Pro
             </div>

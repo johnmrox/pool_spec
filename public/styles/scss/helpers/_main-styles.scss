@@ -123,15 +123,6 @@ footer {
 	}
 }
 
-// .inner-nav-container li:last-child {
-// 	div {
-// 		color: $color-tertiary;
-// 		border: 2px solid $color-accent-minor;
-// 		padding: 7px;
-// 		border-radius: 3px;
-// 	}
-// }
-
 .li-flex {
 	@include mq('s') {
 		@include flexbox($justify: space-between);
@@ -361,6 +352,10 @@ footer {
 
 .flex-container {
 	@include flexbox($justify: center, $wrap: wrap);
+	@include mq('s') {
+		width: 95%;
+		margin: 0 auto;
+	}
 }
 
 /* contact card */

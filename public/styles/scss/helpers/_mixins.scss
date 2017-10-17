@@ -17,15 +17,10 @@
 	@content;
 }
 
-//media queries
 @mixin mq($break) {
-	@if $break == 'm' {
-		@media (max-width: $break-m) {
-			@content;
-		}
-	} @else if $break == 's' {
-		@media (max-width: $break-s) {
-			@content;
-		}
+	$value: map-get($breakpoints, $break);
+
+	@media (max-width: $value) {
+		@content;
 	}
 }

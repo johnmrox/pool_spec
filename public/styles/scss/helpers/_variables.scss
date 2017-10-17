@@ -18,5 +18,4 @@ $font-stack-primary: 'Monsal Gothic Bold';
 $font-size-primary: 12px;
 
 // media queries
-$break-m: 980px;
-$break-s: 768px;
+$breakpoints: ('s': 768px, 'm': 980px);

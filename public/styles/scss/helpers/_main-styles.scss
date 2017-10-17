@@ -93,17 +93,13 @@ footer {
 	}
 }
 
-.pool-spa-container {
+/*. outer positioning */
+
+.outer-positioning-container {
 	@include flexbox($direction: column);
-	label {
-		font-size: $font-size-primary;
-	}
-	@include mq('s') {
-		p {
-			display: none;
-		}
-	}
 }
+
+/* navbar */
 
 .find-pro-min-container {
 	@extend %cursor-pointer;
@@ -112,6 +108,9 @@ footer {
 	border: 2px solid $color-accent-minor;
 	padding: 7px;
 	border-radius: 3px;
+	@include mq('s') {
+		display: block;
+	}
 }
 
 .find-pro-min {
@@ -119,14 +118,6 @@ footer {
 		padding-left: 0;
 	}
 }
-
-/*. outer positioning */
-
-.outer-positioning-container {
-	@include flexbox($direction: column);
-}
-
-/* navbar */
 
 .inner-nav-container {
 	@include flexbox($align: center, $justify: space-between);
@@ -324,6 +315,18 @@ footer {
 }
 
 /* contact card */
+
+.pool-spa-container {
+	@include flexbox($direction: column);
+	label {
+		font-size: $font-size-primary;
+	}
+	@include mq('s') {
+		p {
+			display: none;
+		}
+	}
+}
 
 .contact-card-container {
 	height: 100%;
@@ -783,9 +786,9 @@ footer {
 		width: 100%;
 	}
 
-	.find-pro-min-container {
-		display: block;
-	}
+	// .find-pro-min-container {
+	// 	display: block;
+	// }
 
 	.navbar-list {
 		width: 100%;

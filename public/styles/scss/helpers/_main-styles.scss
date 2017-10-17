@@ -5,12 +5,12 @@
 }
 
 body {
+	justify-content: center;
 	padding-top: 113px;
 	@include mq('m') {
 		padding-top: 71px;
 	}
 	@include mq('s') {
-		background-color: red;
 		padding-top: 55px;
 	}
 }
@@ -18,10 +18,6 @@ body {
 p {
 	padding: 0;
 	margin: 0;
-}
-
-body {
-	justify-content: center;
 }
 
 span {

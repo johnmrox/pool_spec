@@ -209,6 +209,9 @@ footer {
 
 .nav-button-container {
 	@include flexbox($align: center, $justify: space-between);
+	@include mq('s') {
+		width: 95%;
+	}
 }
 
 /* keep below navbar list span */
@@ -883,9 +886,9 @@ footer {
 		}
 	}
 
-	.nav-button-container {
-		width: 95%;
-	}
+	// .nav-button-container {
+	// 	width: 95%;
+	// }
 
 	.li-container {
 		@include flexbox($justify: space-between);

@@ -98,6 +98,11 @@ footer {
 	label {
 		font-size: $font-size-primary;
 	}
+	@include mq('s') {
+		p {
+			display: none;
+		}
+	}
 }
 
 .find-pro-min-container {
@@ -719,9 +724,11 @@ footer {
 
 	/*	.nav-top-first,*/
 
-	.pool-spa-container p {
-		display: none;
-	}
+	// .pool-spa-container {
+	// 	p {
+	// 		display: none;
+	// 	}
+	// }
 
 	.contact-button-container {
 		display: none;

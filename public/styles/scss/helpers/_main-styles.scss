@@ -30,20 +30,27 @@ footer {
 
 .send-email-2 {
 	display: none;
+	@include mq('s') {
+		display: inline-block;
+	}
 }
 
 .contact-checkbox-container {
 	display: none;
+	@include mq('s') {
+		@include flexbox;
+		padding-left: 0;
+		li {
+			list-style: none;
+		}
+	}
 }
 
 .tap-to-call {
 	display: none;
-}
-
-.contact-top,
-.outer-top-bar {
-	background-color: $color-primary;
-	color: $white;
+	@include mq('s') {
+		display: inline-block;
+	}
 }
 
 .navy {
@@ -192,6 +199,8 @@ footer {
 	left: 0;
 	z-index: 9996;
 	margin: 0;
+	background-color: $color-primary;
+	color: $white;
 }
 
 .menu-close-button {
@@ -321,6 +330,8 @@ footer {
 .contact-top {
 	font-size: $font-size-primary;
 	padding: 22px 0;
+	background-color: $color-primary;
+	color: $white;
 }
 
 .close-contact-button {
@@ -843,17 +854,17 @@ footer {
 		}
 	}
 
-	.send-email-2 {
-		display: inline-block;
-	}
+	// .send-email-2 {
+	// 	display: inline-block;
+	// }
 
-	.contact-checkbox-container {
-		@include flexbox;
-		padding-left: 0;
-		li {
-			list-style: none;
-		}
-	}
+	// .contact-checkbox-container {
+	// 	@include flexbox;
+	// 	padding-left: 0;
+	// 	li {
+	// 		list-style: none;
+	// 	}
+	// }
 
 	.no-padding-left {
 		padding-left: 0;
@@ -907,9 +918,9 @@ footer {
 
 	/* dealer */
 
-	.tap-to-call {
-		display: inline-block;
-	}
+	// .tap-to-call {
+	// 	display: inline-block;
+	// }
 
 	.card {
 		border-radius: 0;

@@ -759,6 +759,37 @@ footer {
 	ul {
 		margin-bottom: 0;
 	}
+	@include mq('m') {
+		div {
+			&:nth-child(1) {
+				@include side-padding(0, 0);
+			}
+			&:nth-child(2) {
+				@include side-padding(0, 0);
+				span {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	@include mq('s') {
+		@include flexbox;
+		div {
+			&:nth-child(1) {
+				@include top-bottom-padding(5px, 5px);
+			}
+			&:nth-child(2) {
+				background-color: $white;
+				@include top-bottom-padding(5px, 5px);
+				border-top: 1px solid lightgray;
+			}
+			&:nth-child(3) {
+				@include top-bottom-padding(5px, 5px);
+				border: 1px solid lightgray;
+				border-bottom: 0;
+			}
+		}
+	}
 }
 
 .filter-outer-container {
@@ -835,19 +866,19 @@ footer {
 	// 	}
 	// }
 
-	.filter-component {
-		div {
-			&:nth-child(1) {
-				@include side-padding(0, 0);
-			}
-			&:nth-child(2) {
-				@include side-padding(0, 0);
-				span {
-					padding-right: 0;
-				}
-			}
-		}
-	}
+	// .filter-component {
+	// 	div {
+	// 		&:nth-child(1) {
+	// 			@include side-padding(0, 0);
+	// 		}
+	// 		&:nth-child(2) {
+	// 			@include side-padding(0, 0);
+	// 			span {
+	// 				padding-right: 0;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	// .credential-item {
 	// 	padding: 0;
@@ -1050,24 +1081,24 @@ footer {
 
 	/* filter */
 
-	.filter-component {
-		@include flexbox;
-		div {
-			&:nth-child(1) {
-				@include top-bottom-padding(5px, 5px);
-			}
-			&:nth-child(2) {
-				background-color: $white;
-				@include top-bottom-padding(5px, 5px);
-				border-top: 1px solid lightgray;
-			}
-			&:nth-child(3) {
-				@include top-bottom-padding(5px, 5px);
-				border: 1px solid lightgray;
-				border-bottom: 0;
-			}
-		}
-	}
+	// .filter-component {
+	// 	@include flexbox;
+	// 	div {
+	// 		&:nth-child(1) {
+	// 			@include top-bottom-padding(5px, 5px);
+	// 		}
+	// 		&:nth-child(2) {
+	// 			background-color: $white;
+	// 			@include top-bottom-padding(5px, 5px);
+	// 			border-top: 1px solid lightgray;
+	// 		}
+	// 		&:nth-child(3) {
+	// 			@include top-bottom-padding(5px, 5px);
+	// 			border: 1px solid lightgray;
+	// 			border-bottom: 0;
+	// 		}
+	// 	}
+	// }
 
 	.filter-outer-container {
 		background-color: $color-secondary;

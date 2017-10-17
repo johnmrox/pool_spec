@@ -802,6 +802,10 @@ footer {
 
 .filter-header {
 	display: inline-block;
+	@include mq('s') {
+		flex-grow: 1;
+		text-align: center;
+	}
 }
 
 .filter-inner-container {
@@ -812,6 +816,10 @@ footer {
 	border-radius: 5px;
 	background-color: $color-secondary;
 	flex: 1;
+	@include mq('s') {
+		@include flexbox($align: stretch, $direction: column);
+		font-size: 15px;
+	}
 }
 
 .credential-component {
@@ -1107,17 +1115,17 @@ footer {
 	// 	background-color: $color-secondary;
 	// }
 
-	.filter-inner-container {
-		@include flexbox($align: stretch, $direction: column);
-		background-color: $color-secondary;
-		font-size: 15px;
-		flex: 1 1;
-	}
+	// .filter-inner-container {
+	// 	@include flexbox($align: stretch, $direction: column);
+	// 	background-color: $color-secondary;
+	// 	font-size: 15px;
+	// 	flex: 1 1;
+	// }
 
-	.filter-header {
-		flex-grow: 1;
-		text-align: center;
-	}
+	// .filter-header {
+	// 	flex-grow: 1;
+	// 	text-align: center;
+	// }
 
 	.credential-list-container {
 		flex: 1 1;

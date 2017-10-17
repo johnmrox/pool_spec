@@ -592,6 +592,9 @@ footer {
 	border-radius: 3px;
 	border: 2px solid $color-accent;
 	padding: 8px 10px;
+	span {
+		padding-left: 0;
+	}
 }
 
 .phone-number-container {
@@ -615,12 +618,6 @@ footer {
 	}
 }
 
-.contact-dealer-btn {
-	span {
-		padding-left: 0;
-	}
-}
-
 .sub-header {
 	color: gray;
 	font-style: italic;
@@ -632,8 +629,11 @@ footer {
 	margin-bottom: 10px;
 	border-bottom: 2px solid #ededed;
 	height: 90px;
-	align-items: center;
-	justify-content: center;
+	@include mq('s') {
+		margin-bottom: 0;
+		border-bottom: 0;
+		height: 70px;
+	}
 }
 
 .card-footer {
@@ -1082,13 +1082,13 @@ footer {
 	// 	margin-bottom: 0;
 	// }
 
-	.card-top {
-		margin-bottom: 0;
-		border-bottom: 0;
-		height: 70px;
-		align-items: center;
-		justify-content: center;
-	}
+	// .card-top {
+	// 	margin-bottom: 0;
+	// 	border-bottom: 0;
+	// 	height: 70px;
+	// 	align-items: center;
+	// 	justify-content: center;
+	// }
 
 	// .phone-number-container {
 	// 	background-color: $color-tertiary;

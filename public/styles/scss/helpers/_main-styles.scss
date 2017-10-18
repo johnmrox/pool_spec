@@ -505,9 +505,6 @@ footer {
 
 .contact-button-container {
 	padding-bottom: 10px;
-	button {
-		outline: none;
-	}
 	@include breakpoint('s') {
 		display: none;
 	}

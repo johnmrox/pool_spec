@@ -131,4 +131,13 @@ var Contact = props =>
 		</footer>
 	</div>;
 
+Contact.propTypes = {
+	closeModal: PropTypes.func.isRequired,
+	dealerName: PropTypes.string.isRequired,
+	contactProperties: PropTypes.object.isRequired,
+	handleFormInputChange: PropTypes.func.isRequired,
+	ownPoolOrSpa: PropTypes.func.isRequired,
+	toggled: PropTypes.string.isRequired
+};
+
 window.Contact = Contact;

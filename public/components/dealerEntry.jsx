@@ -46,4 +46,9 @@ var DealerEntry = props =>
 		</div>
 	</div>;
 
+DealerEntry.propTypes = {
+	dealer: PropTypes.object.isRequired,
+	openModal: PropTypes.func.isRequired
+};
+
 window.DealerEntry = DealerEntry;

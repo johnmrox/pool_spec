@@ -63,4 +63,10 @@ var Nav = props =>
     </div>
   </nav>;
 
+Nav.propTypes = {
+  showMenu: PropTypes.string.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+  hideMenu: PropTypes.string.isRequired
+};
+
 window.Nav = Nav;

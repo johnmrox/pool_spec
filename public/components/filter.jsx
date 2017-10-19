@@ -46,4 +46,10 @@ var Filter = props =>
 		</div>
 	</div>;
 
+Filter.propTypes = {
+	dealerTotal: PropTypes.number.isRequired,
+	dealer: PropTypes.object.isRequired,
+	handleFilterChange: PropTypes.func.isRequired
+};
+
 window.Filter = Filter;

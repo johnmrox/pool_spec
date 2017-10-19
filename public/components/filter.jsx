@@ -48,7 +48,11 @@ var Filter = props =>
 
 Filter.propTypes = {
 	dealerTotal: PropTypes.number.isRequired,
-	dealer: PropTypes.object.isRequired,
+	dealer: PropTypes.shape({
+		zipcode: PropTypes.string.isRequired,
+		location: PropTypes.Object,
+		dealers: PropTypes.array.isRequired
+	}).isRequired,
 	handleFilterChange: PropTypes.func.isRequired
 };
 

@@ -47,7 +47,19 @@ var DealerEntry = props =>
 	</div>;
 
 DealerEntry.propTypes = {
-	dealer: PropTypes.object.isRequired,
+	dealer: PropTypes.shape({
+		companyID: PropTypes.number.isRequired,
+		name: PropTypes.string.isRequired,
+		phone1: PropTypes.string.isRequired,
+		email: PropTypes.string.isRequired,
+		addressLine1: PropTypes.string.isRequired,
+		addressLine2: PropTypes.string,
+		city: PropTypes.string.isRequired,
+		state: PropTypes.string.isRequired,
+		country: PropTypes.string.isRequired,
+		zipcode: PropTypes.string.isRequired,
+		certifications: PropTypes.array.isRequired
+	}).isRequired,
 	openModal: PropTypes.func.isRequired
 };
 

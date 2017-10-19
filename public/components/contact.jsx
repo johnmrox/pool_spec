@@ -134,7 +134,13 @@ var Contact = props =>
 Contact.propTypes = {
 	closeModal: PropTypes.func.isRequired,
 	dealerName: PropTypes.string.isRequired,
-	contactProperties: PropTypes.object.isRequired,
+	contactProperties: PropTypes.shape({
+		name: PropTypes.string.isRequired,
+		number: PropTypes.string.isRequired,
+		address: PropTypes.string.isRequired,
+		comments: PropTypes.string.isRequired,
+		own: PropTypes.bool.isRequired
+	}).isRequired,
 	handleFormInputChange: PropTypes.func.isRequired,
 	ownPoolOrSpa: PropTypes.func.isRequired,
 	toggled: PropTypes.string.isRequired

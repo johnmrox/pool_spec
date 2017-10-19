@@ -241,7 +241,11 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-	dealers: PropTypes.object.isRequired
+	dealers: PropTypes.shape({
+		zipcode: PropTypes.string.isRequired,
+		location: PropTypes.Object,
+		dealers: PropTypes.array.isRequired
+	}).isRequired
 };
 
 ReactDOM.render(<App dealers={window.dealerData} />, document.getElementById('app'));

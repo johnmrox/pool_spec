@@ -18,11 +18,12 @@ class App extends React.Component {
 			},
 			isModalOpen: false,
 			dealerName: '',
-			dealerList: window.dealerData.dealers,
+			dealerList: props.dealers.dealers,
 			totalDealers: 0,
 			toggled: '',
 			showMenu: 'showing',
-			hideMenu: 'hiding'
+			hideMenu: 'hiding',
+			hover: false
 		};
 		this.handleFilterChange = this.handleFilterChange.bind(this);
 		this.handleFormInputChange = this.handleFormInputChange.bind(this);
@@ -30,6 +31,7 @@ class App extends React.Component {
 		this.closeModal = this.closeModal.bind(this);
 		this.handleButtonClick = this.handleButtonClick.bind(this);
 		this.toggleMenu = this.toggleMenu.bind(this);
+		this.hovering = this.hovering.bind(this);
 	}
 
 	componentDidMount() {
@@ -56,6 +58,11 @@ class App extends React.Component {
 		this.setState({
 			contactForm: contactForm
 		});
+	}
+
+	hovering() {
+		console.log('hover state: ', this.state.hover);
+		this.setState({ hover: !this.state.hover });
 	}
 
 	openModal(dealerName) {
@@ -232,5 +239,9 @@ class App extends React.Component {
 		);
 	}
 }
+
+App.propTypes = {
+	dealers: PropTypes.object.isRequired
+};
 
 ReactDOM.render(<App dealers={window.dealerData} />, document.getElementById('app'));

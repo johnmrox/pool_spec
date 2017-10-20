@@ -2,11 +2,6 @@ var Filter = props =>
 	<div className="filter-outer-container">
 		<div className="filter-inner-container">
 			<div className="filter-component">
-				{/*<div className="blue dealer-numbers filter-header">
-					<span>
-						{props.dealerTotal} dealers in {props.dealer.zipcode}
-					</span>
-				</div>*/}
 				<Stats dealers={props.dealer} zip={props.zip} />
 				<div className="filter-header">
 					<span>Filter Results</span>

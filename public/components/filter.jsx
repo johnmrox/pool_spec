@@ -1,8 +1,8 @@
-var Filter = props =>
+var Filter = ({ dealer, zip, handleFilterChange }) =>
 	<div className="filter-outer-container">
 		<div className="filter-inner-container">
 			<div className="filter-component">
-				<Stats dealers={props.dealer} zip={props.zip} />
+				<Stats dealers={dealer} zip={zip} />
 				<div className="filter-header">
 					<span>Filter Results</span>
 				</div>
@@ -18,23 +18,23 @@ var Filter = props =>
 								className="form-check-input"
 								type="checkbox"
 								name="service"
-								onChange={e => props.handleFilterChange(e)}
+								onChange={e => handleFilterChange(e)}
 							/>
 						</span>Service
 					</li>
 					<li className="credential-item">
 						<span>
-							<input className="" type="checkbox" name="installation" onChange={e => props.handleFilterChange(e)} />
+							<input className="" type="checkbox" name="installation" onChange={e => handleFilterChange(e)} />
 						</span>Installation
 					</li>
 					<li className="credential-item">
 						<span>
-							<input className="" type="checkbox" name="residential" onChange={e => props.handleFilterChange(e)} />
+							<input className="" type="checkbox" name="residential" onChange={e => handleFilterChange(e)} />
 						</span>Residential
 					</li>
 					<li className="credential-item">
 						<span>
-							<input className="" type="checkbox" name="commercial" onChange={e => props.handleFilterChange(e)} />
+							<input className="" type="checkbox" name="commercial" onChange={e => handleFilterChange(e)} />
 						</span>Commercial<span className="glyphicon glyphicon-question-sign light-grey question">
 							<span className="pop-up">Limited to a few locations</span>
 						</span>
@@ -46,7 +46,8 @@ var Filter = props =>
 
 Filter.propTypes = {
 	dealer: PropTypes.array.isRequired,
-	handleFilterChange: PropTypes.func.isRequired
+	handleFilterChange: PropTypes.func.isRequired,
+	zip: PropTypes.string.isRequired
 };
 
 window.Filter = Filter;

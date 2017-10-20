@@ -1,8 +1,8 @@
-var DealerList = props =>
+var DealerList = ({ dealers, openModal }) =>
 	<div>
 		<div className="flex-container">
-			{' '}{props.dealers.map(dealer =>
-				<DealerEntry dealer={dealer.data} key={dealer.data.companyID} openModal={props.openModal} />
+			{' '}{dealers.map(dealer =>
+				<DealerEntry dealer={dealer.data} key={dealer.data.companyID} openModal={openModal} />
 			)}
 		</div>
 	</div>;

@@ -1,7 +1,7 @@
-var Nav = props =>
+var Nav = ({ showMenu, toggleMenu, hideMenu }) =>
   <nav className="navbar outer-nav-bar">
     <div className="inner-nav-container">
-      <div className={`nav-button-container ${props.showMenu}`}>
+      <div className={`nav-button-container ${showMenu}`}>
         <div className="navbar-header top-nav-item">
           <a href="#">
             <img alt="logo" className="nav-logo" src="public/img/logo.png" />
@@ -13,14 +13,14 @@ var Nav = props =>
             Find A Pro
           </div>
         </div>
-        <div className="menu-expand top-nav-item" onClick={props.toggleMenu}>
+        <div className="menu-expand top-nav-item" onClick={toggleMenu}>
           <div className="menu-button-line" />
           <div className="menu-button-line" />
           <div className="menu-button-line" />
         </div>
       </div>
-      <div className={`navbar-list ${props.hideMenu}`}>
-        <div className={`menu-close-button accent`} onClick={props.toggleMenu}>
+      <div className={`navbar-list ${hideMenu}`}>
+        <div className={`menu-close-button accent`} onClick={toggleMenu}>
           <p className="fa fa-close">&#160;</p>
         </div>
         <ul className="nav navbar-nav navbar-list-items">

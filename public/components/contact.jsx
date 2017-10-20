@@ -1,18 +1,18 @@
-var Contact = props =>
+var Contact = ({ dealerName, closeModal, handleFormInputChange, ownPoolOrSpa, toggled, contactProperties }) =>
 	<div className="contact-card-container">
 		<div className="contact-top">
 			<div className="container-fluid contact-top-container">
-				<span className="fa fa-close close-contact-button" onClick={props.closeModal} />
+				<span className="fa fa-close close-contact-button" onClick={closeModal} />
 				<p>EMAIL</p>
 				<p className="contact-dealer-name">
-					{props.dealerName}
+					{dealerName}
 				</p>
 			</div>
 		</div>
 		<div className="container-fluid">
 			<div className="gray">
 				<p className="below-contact-header">
-					Fill out the form below and {props.dealerName} will get in touch.
+					Fill out the form below and {dealerName} will get in touch.
 				</p>
 			</div>
 			<div className="container-fluid container-email">
@@ -20,47 +20,43 @@ var Contact = props =>
 					<div className="form-group contact-form-label">
 						<div className="contact-label-row">
 							<label className="icon-label">First and last name</label>
-							<span className={`accent ${props.contactProperties.name ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
+							<span className={`accent ${contactProperties.name ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
 						<input
 							type="text"
-							value={props.contactProperties.name}
+							value={contactProperties.name}
 							name="name"
 							className="form-control"
-							onChange={e => props.handleFormInputChange(e)}
+							onChange={e => handleFormInputChange(e)}
 						/>
 					</div>
 					<div className="form-group contact-form-label phone-label">
 						<div className="contact-label-row">
 							<label>Phone number</label>
 
-							<span
-								className={`accent ${props.contactProperties.number ? `fa fa-check-circle-o` : `fa fa-circle-o`}`}
-							/>
+							<span className={`accent ${contactProperties.number ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
 						<input
 							type="text"
-							value={props.contactProperties.number}
+							value={contactProperties.number}
 							name="number"
 							className="form-control"
-							onChange={e => props.handleFormInputChange(e)}
+							onChange={e => handleFormInputChange(e)}
 						/>
 					</div>
 					<div className="form-group contact-form-label">
 						<div className="contact-label-row">
 							<label>Email address</label>
 
-							<span
-								className={`accent ${props.contactProperties.address ? `fa fa-check-circle-o` : `fa fa-circle-o`}`}
-							/>
+							<span className={`accent ${contactProperties.address ? `fa fa-check-circle-o` : `fa fa-circle-o`}`} />
 						</div>
 
 						<input
 							type="text"
-							value={props.contactProperties.address}
+							value={contactProperties.address}
 							name="address"
 							className="form-control"
-							onChange={e => props.handleFormInputChange(e)}
+							onChange={e => handleFormInputChange(e)}
 						/>
 					</div>
 					<div className="form-group contact-form-label">
@@ -70,11 +66,11 @@ var Contact = props =>
 						</div>
 						<textarea
 							type="text"
-							value={props.contactProperties.comments}
+							value={contactProperties.comments}
 							name="comments"
 							className="form-control"
 							rows="3"
-							onChange={e => props.handleFormInputChange(e)}
+							onChange={e => handleFormInputChange(e)}
 						/>
 					</div>
 					<div className="pool-spa-container">
@@ -86,14 +82,14 @@ var Contact = props =>
 						<div className="own-spa-container">
 							<div className="contact-button-container">
 								<button
-									className={`contact-yes-button ${props.toggled ? `button-clicked` : `no-pool-or-spa`}`}
-									onClick={e => props.ownPoolOrSpa('yes', e)}
+									className={`contact-yes-button ${toggled ? `button-clicked` : `no-pool-or-spa`}`}
+									onClick={e => ownPoolOrSpa('yes', e)}
 								>
 									Yes
 								</button>
 								<button
-									className={`contact-no-button ${props.toggled === false ? `button-clicked` : `no-pool-or-spa`}`}
-									onClick={e => props.ownPoolOrSpa('no', e)}
+									className={`contact-no-button ${toggled === false ? `button-clicked` : `no-pool-or-spa`}`}
+									onClick={e => ownPoolOrSpa('no', e)}
 								>
 									No
 								</button>

@@ -1,5 +1,5 @@
-var DealerEntry = props => {
-	let phone1 = props.dealer.phone1.split('-').join('.');
+var DealerEntry = ({ dealer, openModal }) => {
+	let phone1 = dealer.phone1.split('-').join('.');
 
 	return (
 		<div className="col-md-4 text-center all-card-container">
@@ -7,7 +7,7 @@ var DealerEntry = props => {
 				<div className="container-fluid card-body">
 					<div className="card-top container-fluid">
 						<p className="dealer-name">
-							{props.dealer.name}
+							{dealer.name}
 						</p>
 					</div>
 					<div className="phone-number-container">
@@ -21,15 +21,15 @@ var DealerEntry = props => {
 					</div>
 					<p className="sub-header">Can't talk now? Click below to send an email</p>
 					<div className="dealer-button-container">
-						<button className="contact-dealer-btn" onClick={e => props.openModal(props.dealer.name)}>
+						<button className="contact-dealer-btn" onClick={e => openModal(dealer.name)}>
 							<span className="fa fa-envelope navy" />Contact This Pro
 						</button>
 					</div>
-					<Hours weekHours={props.dealer.weekHours} />
+					<Hours weekHours={dealer.weekHours} />
 				</div>
 				<div className="card-footer gray">
 					<div className="cert-container">
-						{props.dealer.certifications.map((certificationObj, index) =>
+						{dealer.certifications.map((certificationObj, index) =>
 							<div className="cert text-left" key={index}>
 								<span className={certificationObj.className} />
 								{certificationObj.certification}

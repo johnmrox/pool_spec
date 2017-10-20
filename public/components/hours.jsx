@@ -1,24 +1,16 @@
-var Hours = props => {
+var Hours = ({ weekHours }) => {
 	return (
 		<div className="business-hours">
 			<div className="bold-text">Business Hours</div>
 			<div>
-				{Object.keys(props.weekHours).map((day, index) =>
+				{Object.keys(weekHours).map((day, index) =>
 					<div className="gray" key={day}>
-						{props.weekHours[day]}
+						{weekHours[day]}
 					</div>
 				)}
 			</div>
 		</div>
 	);
 };
-
-Hours.propTypes = {
-	dealer: PropTypes.shape({
-		weekHours: PropTypes.object.isRequired
-	})
-};
-
-DealerEntry.propTypes = {};
 
 window.Hours = Hours;

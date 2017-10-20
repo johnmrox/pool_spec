@@ -1,9 +1,9 @@
-var Stats = props => {
-	var totalDealers = props.dealers.length;
+var Stats = ({ dealers, zip }) => {
+	var totalDealers = dealers.length;
 
 	return (
 		<div className="blue dealer-numbers filter-header">
-			{totalDealers} dealers in {props.zip}
+			{totalDealers} dealers in {zip}
 		</div>
 	);
 };

@@ -25,7 +25,7 @@ var DealerEntry = props => {
 							<span className="fa fa-envelope navy" />Contact This Pro
 						</button>
 					</div>
-					<Hours dealer={props.dealer} />
+					<Hours weekHours={props.dealer.weekHours} />
 				</div>
 				<div className="card-footer gray">
 					<div className="cert-container">

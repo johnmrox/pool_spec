@@ -36,7 +36,6 @@ class App extends React.Component {
 	componentDidMount() {
 		let dealersWithUpdatedHours = this.state.dealerList.map(dealer => {
 			let tempDealer = Object.assign({}, dealer);
-			// tempDealer.data.phone1 = tempDealer.data.phone1.split('-').join('.');
 			tempDealer.data.weekHours = this.groupDaysOfweek(tempDealer.data.weekHours);
 			tempDealer.data.certifications = this.addClassName(tempDealer.data.certifications);
 			return tempDealer;

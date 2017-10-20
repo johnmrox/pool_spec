@@ -35,7 +35,9 @@ var Filter = props =>
 					<li className="credential-item">
 						<span>
 							<input className="" type="checkbox" name="commercial" onChange={e => props.handleFilterChange(e)} />
-						</span>Commercial<span className="glyphicon glyphicon-question-sign light-grey" />
+						</span>Commercial<span className="glyphicon glyphicon-question-sign light-grey question">
+							<span className="pop-up">Limited to a few locations</span>
+						</span>
 					</li>
 				</ul>
 			</div>

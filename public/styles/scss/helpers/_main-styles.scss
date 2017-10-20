@@ -824,6 +824,32 @@ footer {
 	}
 }
 
+.question {
+	position: relative;
+	.pop-up {
+		display: none;
+		position: absolute;
+		top: -10px;
+		left: 40px;
+		text-align: left;
+	}
+}
+
+.question {
+	&:hover {
+		.pop-up {
+			display: inline-block;
+			background-color: rgba(0, 0, 0, 0.3);
+			color: white;
+			border-radius: 5px;
+			z-index: 9995;
+			vertical-align: middle;
+			width: 150px;
+			padding: 5px;
+		}
+	}
+}
+
 .full-hide {
 	display: none;
 	@include breakpoint('s') {

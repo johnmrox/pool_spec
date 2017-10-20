@@ -2,11 +2,12 @@ var Filter = props =>
 	<div className="filter-outer-container">
 		<div className="filter-inner-container">
 			<div className="filter-component">
-				<div className="blue dealer-numbers filter-header">
+				{/*<div className="blue dealer-numbers filter-header">
 					<span>
 						{props.dealerTotal} dealers in {props.dealer.zipcode}
 					</span>
-				</div>
+				</div>*/}
+				<Stats dealers={props.dealer} zip={props.zip} />
 				<div className="filter-header">
 					<span>Filter Results</span>
 				</div>
@@ -47,12 +48,7 @@ var Filter = props =>
 	</div>;
 
 Filter.propTypes = {
-	dealerTotal: PropTypes.number.isRequired,
-	dealer: PropTypes.shape({
-		zipcode: PropTypes.string.isRequired,
-		location: PropTypes.Object,
-		dealers: PropTypes.array.isRequired
-	}).isRequired,
+	dealer: PropTypes.array.isRequired,
 	handleFilterChange: PropTypes.func.isRequired
 };
 

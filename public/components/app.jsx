@@ -19,7 +19,6 @@ class App extends React.Component {
 			isModalOpen: false,
 			dealerName: '',
 			dealerList: props.dealers.dealers,
-			totalDealers: 0,
 			toggled: '',
 			showMenu: 'showing',
 			hideMenu: 'hiding',
@@ -222,8 +221,8 @@ class App extends React.Component {
 					<div className="background-image-main" />
 					<div className="container-custom">
 						<Filter
-							dealerTotal={this.state.totalDealers}
-							dealer={this.props.dealers}
+							dealer={this.props.dealers.dealers}
+							zip={this.props.dealers.zipcode}
 							handleFilterChange={this.handleFilterChange}
 						/>
 						<DealerList

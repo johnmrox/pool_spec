@@ -3,7 +3,9 @@ var Stats = ({ dealers, zip }) => {
 
 	return (
 		<div className="blue dealer-numbers filter-header">
-			{totalDealers} dealers in {zip}
+			<span>
+				{totalDealers} dealers in {zip}
+			</span>
 		</div>
 	);
 };

@@ -21,8 +21,7 @@ class App extends React.Component {
 			dealerList: props.dealers.dealers,
 			toggled: '',
 			showMenu: 'showing',
-			hideMenu: 'hiding',
-			hover: false
+			hideMenu: 'hiding'
 		};
 		this.handleFilterChange = this.handleFilterChange.bind(this);
 		this.handleFormInputChange = this.handleFormInputChange.bind(this);
@@ -30,7 +29,6 @@ class App extends React.Component {
 		this.closeModal = this.closeModal.bind(this);
 		this.handleButtonClick = this.handleButtonClick.bind(this);
 		this.toggleMenu = this.toggleMenu.bind(this);
-		this.hovering = this.hovering.bind(this);
 	}
 
 	componentDidMount() {
@@ -57,11 +55,6 @@ class App extends React.Component {
 		});
 	}
 
-	hovering() {
-		console.log('hover state: ', this.state.hover);
-		this.setState({ hover: !this.state.hover });
-	}
-
 	openModal(dealerName) {
 		this.setState({
 			isModalOpen: true,
@@ -69,7 +62,8 @@ class App extends React.Component {
 		});
 	}
 
-	closeModal() {
+	closeModal(e) {
+		e.preventDefault();
 		this.setState({ isModalOpen: false });
 	}
 
@@ -203,7 +197,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="outer-container">
-				<Modal isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
+				<Modal isOpen={this.state.isModalOpen} onClose={this.closeModal}>
 					<Contact
 						dealerName={this.state.dealerName}
 						contactProperties={this.state.contactForm}

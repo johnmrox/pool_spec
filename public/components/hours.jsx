@@ -13,4 +13,8 @@ var Hours = ({ weekHours }) => {
 	);
 };
 
+Hours.propTypes = {
+	weekHours: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
+};
+
 window.Hours = Hours;

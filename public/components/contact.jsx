@@ -139,7 +139,7 @@ Contact.propTypes = {
 	}).isRequired,
 	handleFormInputChange: PropTypes.func.isRequired,
 	ownPoolOrSpa: PropTypes.func.isRequired,
-	toggled: PropTypes.string.isRequired
+	toggled: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]).isRequired
 };
 
 window.Contact = Contact;
